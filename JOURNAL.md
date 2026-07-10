@@ -119,3 +119,142 @@ I honestly cannot believe that I am remaking the schematics for this project for
 After verifying my schematic with official wiring schematics for each specialized chip, I will work to ensure that my board is ready to route in the PCB editor!
 
 ---
+
+##  Log 6: July 4, 2026 - Schematics Clean Up - 1 hour
+
+Timelapse link: https://lapse.hackclub.com/timelapse/JP0mHgVsAJM-.
+
+I spent a good hour organizing the schematics while following datasheet recommendations. The schematic is much more clearer, especially considering where each capacitor goes on the LSM6DSV16X (IMU) and MAX17048 fuel gauge chips! 
+
+I was reading through Macondo Docs and I found this interesting tip:
+
+<img width="1888" height="840" alt="image" src="https://github.com/user-attachments/assets/768cce9c-0a51-4082-b8ef-c00fac6ef103" />
+
+Thus, I decided to follow the tip and use the correct symbols for power and GND flags, having power flags point up while GND flags point down. I have to admit it makes the schematics a lot more cleaner than how I had originally done them in the past.
+
+<img width="1198" height="821" alt="image" src="https://github.com/user-attachments/assets/22023963-b688-4702-a651-d44a4e45394e" />
+
+### Future work:
+I hope to finally begin working on the PCB design next time!
+
+---
+
+##  Log 7: July 5, 2026 - Start of PCB - 1.3 hours
+
+Timelapse link: https://lapse.hackclub.com/timelapse/LVc4ahCd2COp.
+
+After calculating where all the components would go, I realized that the NanoS3 microcontroller footprint was bigger than I had expected. With this, I decided to shift all the used pins to one side so that I could maximize space for routing while keeping everything in a 15mm width board.
+
+<img width="807" height="583" alt="image" src="https://github.com/user-attachments/assets/d353d5df-0cfb-44a5-a7a3-fd70f11d2168" />
+
+Honestly, it was difficult to figure out how I would organize each part as I did not want to put the microcontroller at the end as the antenna would make the pen extra long. However, I also did not want to put the microcontroller and antenna near the tip of the pen as that would force the antenna to be near electronics...
+
+<img width="1442" height="702" alt="image" src="https://github.com/user-attachments/assets/a46db40a-9403-4101-9522-9a5837acad5a" />
+
+It took me quite some time to make some compromises with placements, and I am still rethinking them...
+
+### Future work:
+Tomorrow, I really hope to actually start working on routing the PCB.
+
+---
+
+##  Log 8: July 6, 2026 - Major PCB Work - 7.5 hours
+
+Timelapse link: https://lapse.hackclub.com/timelapse/swXfEaVnoNOx.
+
+Today, I spent a bit too much time finalizing the entire PCB layout and working on routing all the connections. This was not easy as it was also my first time routing a bare USB-C receptacle, and I quickly found it to be extremely difficult!
+
+I began by adding the ESD USB-C protection chip USBLC6-2SC6 into my schematic.
+
+<img width="632" height="562" alt="image" src="https://github.com/user-attachments/assets/2a2c9f38-843a-4537-9f0b-3d3e2bfbc71e" />
+
+When I began routing using KiCad's differential routing tool, it refused to connect to the ESD chip as the Data lines were reversed in the footprint layout! 
+
+<img width="654" height="724" alt="image" src="https://github.com/user-attachments/assets/a5a14a43-da1d-4b77-a30d-1dff4b94b501" />
+
+I tried numerous ways to connect the lines, and they were all far from equal in length.
+
+<img width="661" height="595" alt="image" src="https://github.com/user-attachments/assets/c56d3157-e025-4118-947e-713ee46c9a1b" />
+<img width="695" height="714" alt="image" src="https://github.com/user-attachments/assets/8eafce7c-877f-4f42-9c72-2703d07a4340" />
+
+After many attempts, I settled on a somewhat symmetrical connection style with vias, and I almost got the data lines to be equal in length. Thankfully, wiring all the other components were relatively straightforward. Yet, it was still a time-consuming task.
+
+<img width="1532" height="525" alt="image" src="https://github.com/user-attachments/assets/d1872c6d-7352-4404-b537-5d97cb8beaef" />
+
+Even after all that hard work, KiCad came up with many errors and I realized I did not route the GND pad thats stuck in the middle of the ESD chip with almost no space for more routing!
+
+<img width="1534" height="735" alt="image" src="https://github.com/user-attachments/assets/a99843b0-d7fa-46f9-b184-052386b60b6b" />
+
+### Future work:
+After much rest, I must figure out how to optimize this PCB routing and solve all those Design Rules Checker errors...
+
+---
+
+##  Log 9: July 7, 2026 - PCB Version 2! - 4 hours
+
+Timelapse link: https://lapse.hackclub.com/timelapse/U-yj73YHo-n-.
+
+I was not expecting to redo the entire PCB routing again from scratch... However, after some thinking and looking at the messy routing I had done, I was set on fixing it all. Instead of simply routing wires on four different layers wherever I wanted, I decided to come up with a plan on how I would handle routing on each layer. 
+
+I decided to place all power and data lines on the first and fourth layer while the second and third layers would be ground planes. Since most of the SMD parts needed to be on the top layer of the PCB, I needed a ground plane directly underneath them, especially for the USB-C receptacle. However, since I had many data lines, including two sets of I2C lines, I wanted to have a ground plane to separate the data lines on different layers to prevent crosstalk. With this, I set a global clearance rule of 0.25mm from all vias and routing, which helped me to freely route while letting KiCad handle the spacing.
+
+I honestly found this PCB much easier to route than before, but I realized that I may have made too many holes in the ground plane...
+
+<img width="1015" height="732" alt="image" src="https://github.com/user-attachments/assets/b66595fa-eaec-4281-889d-da709247f6a5" />
+<img width="1015" height="436" alt="image" src="https://github.com/user-attachments/assets/8303cdc3-3137-4598-a3d2-3446bd42cfbe" />
+
+A key difficulty that limited how I could wire was that since the NanoS3 had exposed vias on its bottom layer, I wanted to avoid routing anything inside the microcontroller footprint. This meant I had to squeeze in vias for each pin.
+
+<img width="1008" height="392" alt="image" src="https://github.com/user-attachments/assets/9d737693-00e8-415e-92a9-279e10bf9d0a" />
+
+Anyhow, this is what the entire PCB looks like as of right now:
+
+<img width="1012" height="337" alt="image" src="https://github.com/user-attachments/assets/ec567e60-9a58-400e-bb4e-3a009d9cf518" />
+
+### Future work:
+Next time, I look forward to checking over the PCB with Design Rules Checker again and starting the CAD for the pen case design!
+
+---
+
+##  Log 10: July 8, 2026 - CAD Attempt 2 - 1.3 hours
+
+Timelapse link: https://lapse.hackclub.com/timelapse/-Hel6EKzSH4P.
+
+I did not think I could have so many errors to solve!
+
+<img width="704" height="601" alt="image" src="https://github.com/user-attachments/assets/81a47899-9450-4659-b48f-f9c555de0d1c" />
+
+I went through each of them and found out that most of them were flagging the clearances of the footprint pads of the SMD parts. Apparently, I had set the default clearance to 0.25mm which was too big for the SMD parts...
+
+As I began working on the CAD design, I chose a rounded square prism shape for the case because I wanted to do somthing different than a generic cylinder. Also, the OLED screen would look much more natural with the rounded square prism.
+
+<img width="704" height="601" alt="image" src="https://github.com/user-attachments/assets/5576c6e9-4b53-4bf4-b1c0-7e815c058cc0" />
+
+While it was great to reference the STEP file of my PCB, I quickly found that the switch part was too wide, meaning I would have to later extend the pen tip...
+
+<img width="916" height="270" alt="image" src="https://github.com/user-attachments/assets/63fc5769-2baf-48cc-83ce-58e3d4f60fb7" />
+<img width="807" height="546" alt="image" src="https://github.com/user-attachments/assets/3f1f078f-8f83-4ea9-8b34-425d9d4f6d0f" />
+
+### Future work:
+I will make some adjustments to the CAD design and work on creating holes and supports for the components on the PCB board.
+
+---
+
+##  Log 11: July 9, 2026 - Heavy CAD Work - 3.5 hours
+
+Timelapse link: https://lapse.hackclub.com/timelapse/df8S33CcSg0K.
+
+Upon realizing that the USB-C receptacle was supposed to stick outside the PCB a bit so it would naturally fit in the CAD case, I had to adjust move its footprint in the PCB.
+
+<img width="1623" height="315" alt="image" src="https://github.com/user-attachments/assets/22fbe23e-4759-4990-ae4b-98b3554ec41f" />
+
+I spent a lot of time figuring out how to create supports for the floating PCB in the hollow case, and I initially wanted to use the rib function in Autodesk Fusion. With some time, I realized it would be easier to do so with the combine, extrude, and cut functions by using the case and PCB to carve out supports.
+
+<img width="529" height="508" alt="image" src="https://github.com/user-attachments/assets/51d01cd1-e496-4b15-a8fc-716141e1df0c" />
+<img width="740" height="568" alt="image" src="https://github.com/user-attachments/assets/9dfa8c5f-0719-42af-a071-ae76543a352a" />
+<img width="740" height="568" alt="image" src="https://github.com/user-attachments/assets/88957d15-b29d-4988-bfde-a2f62f842369" />
+
+### Future work:
+I am hoping to finish the CAD case design tomorrow!
+
+---
