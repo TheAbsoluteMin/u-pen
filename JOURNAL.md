@@ -263,7 +263,7 @@ I am hoping to finish the CAD case design tomorrow!
 
 Timelapse link: https://lapse.hackclub.com/timelapse/YAtuVmnhOys9.
 
-I could not believe my eyes when I reopened Autodesk Fusion today. It had signed me out automatically with an error, so I refreshed the software and logged in again. However, upon opening my project file, I realized that it had not saved any work from yesterday! Thus, after some extremely deep breaths, I spent my time redoing the supports and holes for uPen's case. I even included holes for the NanoS3 so that heat could escape, which will be crucial when the ESP32 chip runs wifi transmissions. 
+I could not believe my eyes when I reopened Autodesk Fusion today. It had signed me out automatically with an error, so I refreshed the software and logged in again. However, upon opening my project file, I realized that it had not saved any work from yesterday! Thus, after some extremely deep breaths, I spent my time redoing the supports and holes for uPen's case. I even included holes for the NanoS3 so that heat could escape, which will be crucial when the ESP32 chip runs WiFi transmissions. 
 
 <img width="1455" height="275" alt="image" src="https://github.com/user-attachments/assets/d49735d0-d52b-4c29-9589-1dc5bf0257af" />
 <img width="1532" height="526" alt="image" src="https://github.com/user-attachments/assets/09ed50cb-c844-4f96-b85a-107f7b6dacb4" />
@@ -279,15 +279,15 @@ I will begin working on exporting all my project files for a design submission o
 
 ---
 
-##  Log 13: July 15, 2026 - uPen Github Work - 1 hour
+##  Log 13: July 15, 2026 - uPen GitHub Work - 1 hour
 
-After downloading the many files for my project, including the source files for the Autodesk Fusion CAD files and KiCad PCB and Schematic files, I began to work on the Github README. Specifically, I created a colorful guide on Canva for demonstrating how to use uPen and explaining how it works!
+After downloading the many files for my project, including the source files for the Autodesk Fusion CAD files and KiCad PCB and Schematic files, I began to work on the GitHub README. Specifically, I created a colorful guide on Canva for demonstrating how to use uPen and explaining how it works!
 
 <img width="1545" height="2000" alt="1" src="https://github.com/user-attachments/assets/35bc70fd-0d2d-4039-80d0-8249ac5c6adc" />
 <img width="1545" height="2000" alt="2" src="https://github.com/user-attachments/assets/e8ebead6-3fd0-415c-9adb-957a91fedaad" />
 <img width="1545" height="1999" alt="3" src="https://github.com/user-attachments/assets/ab5d12ee-3b65-42ea-b438-7f63b6a3ab8a" />
 
 ### Future work:
-I hope to finally finish the Github work for uPen soon!
+I hope to finally finish the GitHub work for uPen soon!
 
 ---
