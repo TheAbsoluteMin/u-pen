@@ -3,4 +3,8 @@
 *.bck
 *.kicad_pcb-bak
 *.kicad_sch-bak
+*.gbr
+*.drl
+*.gbrjob
+!*.zip
 fp-info-cache
