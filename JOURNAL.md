@@ -1,7 +1,7 @@
 ---
 title: "uPen"
 author: "TheAbsoluteMin"
-description: "A WiFi-enabled smart pencil that records handwritten math equations and solves them."
+description: "A WiFi-enabled smart pen that records handwritten math equations and solves them."
 created_at: "2026-06-21"
 ---
 
@@ -283,7 +283,7 @@ I will begin working on exporting all my project files for a design submission o
 
 After downloading the many files for my project, including the source files for the Autodesk Fusion CAD files and KiCad PCB and Schematic files, I began to work on the GitHub README. Specifically, I created a colorful guide on Canva for demonstrating how to use uPen and explaining how it works!
 
-<img width="1545" height="2000" alt="1" src="https://github.com/user-attachments/assets/35bc70fd-0d2d-4039-80d0-8249ac5c6adc" />
+<img width="1545" height="1999" alt="pageONE" src="https://github.com/user-attachments/assets/83f0e4bc-e785-4c6a-9328-c34b00d403da" />
 <img width="1545" height="2000" alt="2" src="https://github.com/user-attachments/assets/e8ebead6-3fd0-415c-9adb-957a91fedaad" />
 <img width="1545" height="1999" alt="3" src="https://github.com/user-attachments/assets/ab5d12ee-3b65-42ea-b438-7f63b6a3ab8a" />
 
