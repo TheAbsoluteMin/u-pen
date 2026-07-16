@@ -1,4 +1,4 @@
-//base_solver code for external ESP32 to process pen packet data in real time
+//base_station code for external ESP32 to process pen packet data in real time
 
 #include <Arduino.h>
 #include <WiFi.h>
