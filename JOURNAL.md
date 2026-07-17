@@ -291,3 +291,22 @@ After downloading the many files for my project, including the source files for 
 I hope to finally finish the GitHub work for uPen soon!
 
 ---
+
+##  Log 14: July 16, 2026 - uPen GitHub Work Again! - 1 hour
+
+Today, I realized the great amount of work needed to put everything together into a nice GitHub repository! It took me a while to recall all the features of uPen, so I could put it all into the README.md.
+
+<img width="1918" height="1138" alt="Screenshot 2026-07-16 075942" src="https://github.com/user-attachments/assets/12dc16e3-a6ce-46b0-b04c-3fa314ab60c3" />
+
+I ran into many problems with uploading files as many of them somehow lost their file code!
+
+<img width="1850" height="1133" alt="Screenshot 2026-07-16 083806" src="https://github.com/user-attachments/assets/b8c101ed-8dc3-401f-b1f5-8efc51ff26b0" />
+
+Another difficult task was gathering all the parts needed in the BOM and finding their respective purchase links! This required a lot of time scrolling through product listings...
+
+<img width="2351" height="1151" alt="image" src="https://github.com/user-attachments/assets/6d62dea7-f9ab-45a9-b423-62dd2754cdc9" />
+
+### Future work:
+Tomorrow, I will find the total value of all the items needed to build uPen, so I can finally submit the design to Hack Club!
+
+---
