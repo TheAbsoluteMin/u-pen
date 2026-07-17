@@ -139,7 +139,7 @@ I hope to finally begin working on the PCB design next time!
 
 ---
 
-##  Log 7: July 5, 2026 - Start of PCB - 1.3 hours
+##  Log 7: July 5, 2026 - Start of PCB - 1.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/LVc4ahCd2COp.
 
@@ -216,7 +216,7 @@ Next time, I look forward to checking over the PCB with Design Rules Checker aga
 
 ---
 
-##  Log 10: July 8, 2026 - CAD Attempt 2 - 1.3 hours
+##  Log 10: July 8, 2026 - CAD Attempt 2 - 1.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/-Hel6EKzSH4P.
 
@@ -259,7 +259,7 @@ I am hoping to finish the CAD case design tomorrow!
 
 ---
 
-##  Log 12: July 10, 2026 - CAD Completion - 2.3 hours
+##  Log 12: July 10, 2026 - CAD Completion - 2.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/YAtuVmnhOys9.
 
