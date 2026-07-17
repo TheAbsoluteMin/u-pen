@@ -279,7 +279,26 @@ I will begin working on exporting all my project files for a design submission o
 
 ---
 
-##  Log 13: July 15, 2026 - uPen GitHub Work - 1 hour
+##  Log 13: July 12, 2026 - Coding - 3 hours
+
+In my mind, the code uPen was not too hard... until I realized how many parts I had to integrate into the code, including the fuel gauge, IMU, OLED display, interupts, dual I2C lines, ESP-Now, and data packet tracking! In order to keep everything organized, I had to utilize pen states: drawing, solving, and charging.
+
+<img width="916" height="145" alt="image" src="https://github.com/user-attachments/assets/6f1f7eea-9b36-42ad-8253-6f88d05a1c47" />
+
+Since I also realized that I would be sending data packets of IMU X and Y coordinates of handwritten motions every 150ms, I would need to keep those WiFi bursts as minimal as possible, so the battery and NanoS3 would not get too hot.
+
+<img width="383" height="263" alt="image" src="https://github.com/user-attachments/assets/f94cb6e3-a44e-4a5d-9d32-e52f99df9ee7" />
+
+I also had to come up with a code system, so I could determine whether a data packet represented the pen writing or moving mid-air. The variable point.is_pressed is 1 when the user is currently writing, 0 when the pen is mid-air, and the final 255 when a 5 second inactivity triggers the solving state.
+
+<img width="1336" height="796" alt="image" src="https://github.com/user-attachments/assets/8fd0aedd-e8b8-4983-b228-ea7ccd9ee9f9" />
+
+### Future work:
+Later, I will begin compiling all my project files for uPen to put them into GitHub.
+
+---
+
+##  Log 14: July 15, 2026 - uPen GitHub Work - 1 hour
 
 After downloading the many files for my project, including the source files for the Autodesk Fusion CAD files and KiCad PCB and Schematic files, I began to work on the GitHub README. Specifically, I created a colorful guide on Canva for demonstrating how to use uPen and explaining how it works!
 
@@ -292,7 +311,7 @@ I hope to finally finish the GitHub work for uPen soon!
 
 ---
 
-##  Log 14: July 16, 2026 - uPen GitHub Work Again! - 1 hour
+##  Log 15: July 16, 2026 - uPen GitHub Work Again! - 1 hour
 
 Today, I realized the great amount of work needed to put everything together into a nice GitHub repository! It took me a while to recall all the features of uPen, so I could put it all into the README.md.
 
