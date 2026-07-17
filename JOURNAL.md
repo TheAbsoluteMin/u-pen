@@ -281,7 +281,7 @@ I will begin working on exporting all my project files for a design submission o
 
 ##  Log 13: July 12, 2026 - Coding - 3 hours
 
-In my mind, the code uPen was not too hard... until I realized how many parts I had to integrate into the code, including the fuel gauge, IMU, OLED display, interupts, dual I2C lines, ESP-Now, and data packet tracking! In order to keep everything organized, I had to utilize pen states: drawing, solving, and charging.
+In my mind, the code for uPen was not too hard... until I realized how many parts I had to integrate into the code, including the fuel gauge, IMU, OLED display, interupts, dual I2C lines, ESP-Now, and data packet tracking! In order to keep everything organized, I had to utilize pen states: drawing, solving, and charging.
 
 <img width="916" height="145" alt="image" src="https://github.com/user-attachments/assets/6f1f7eea-9b36-42ad-8253-6f88d05a1c47" />
 
