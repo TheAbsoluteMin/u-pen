@@ -1,7 +1,7 @@
 # uPen
 
-<img width="1365" height="194" alt="image" src="https://github.com/user-attachments/assets/effb1129-49eb-436a-9e02-7a62cf8a8dd5" />
-<img width="1339" height="238" alt="image" src="https://github.com/user-attachments/assets/204f2168-7dc2-484f-8eee-a35b3672bda1" />
+<img width="1373" height="212" alt="PCB_1" src="https://github.com/user-attachments/assets/f235b484-1b3d-4ddd-9890-24535662dff5" />
+<img width="1142" height="259" alt="Case1" src="https://github.com/user-attachments/assets/258d4b33-25be-438a-9bfa-49d7d149e01e" />
 
 uPen is a WiFi-enabled smart pen that records handwritten math equations and solves them.
 
@@ -14,7 +14,6 @@ Initially, uPen was named Insta-Form, and it would have served as an alternative
 <img width="1545" height="1999" alt="pageONE" src="https://github.com/user-attachments/assets/7a5ac4a3-aae8-4548-a74a-1550319c133e" />
 <img width="1545" height="2000" alt="2" src="https://github.com/user-attachments/assets/38632e2b-2be6-420e-ae29-980187f510e8" />
 <img width="1545" height="1999" alt="3" src="https://github.com/user-attachments/assets/3cb5a8e6-4893-4b0e-94de-0ae367360f2d" />
-* ZUPT  stands for Zero Velocity Update, which is an algorithm that forces the velocity to zero in order to reduce accumulating errors in IMU modules.
 
 ## Features
 
