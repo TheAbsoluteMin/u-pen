@@ -1,0 +1,13 @@
+Reference,Qty,Value,DNP,Exclude from BOM,Exclude from Board,Footprint,Datasheet,Purchase Link,Part
+"C_0.1_1,C_0.1_2,C_0.1_3,C_0.1_4",4,C,,,,Capacitor_SMD:C_0402_1005Metric,,https://jlcpcb.com/partdetail/1877-CL05B104KO5NNNC/C1525,C1525
+"C_10_5,C_10_6",2,C,,,,Capacitor_SMD:C_0603_1608Metric,,https://jlcpcb.com/partdetail/97651-CL10A106MA8NRNC/C96446,C96446
+C_22_Tantalum_2,1,C_Polarized,,,,Capacitor_Tantalum_SMD:CP_EIA-3528-12_Kemet-T,,https://jlcpcb.com/partdetail/151697-CA45_B_16V_22uFM/C140371,C140371
+J1,1,USB_C_Receptacle_USB2.0_16P,,,,Connector_USB:USB_C_Receptacle_XKB_U262-16XN-4BVC11,https://www.usb.org/sites/default/files/documents/usb_type-c.zip,https://jlcpcb.com/partdetail/XKBConnection-U262_161N4BVC11/C319148 ,C319148
+S1,1,SDS001R,,,,KiCad:SDS001R,,https://jlcpcb.com/partdetail/CK-SDS001R/C221963,C221963
+SW1,1,SW_SPDT,,,,Button_Switch_SMD:SW_SPDT_PCM12,,https://jlcpcb.com/partdetail/CK-PCM12SMTR/C221841,C221841
+U2,1,LSM6DSV16XTR,,,,LSM6DSV16XTR (1):XDCR_LSM6DSV16XTR,,https://jlcpcb.com/partdetail/STMicroelectronics-LSM6DSV16XTR/C5267406,C5267406
+U3,1,MAX17048G_T10,,,,MAX17048G_T10 (1):SON50P200X200X80-9N,,https://jlcpcb.com/partdetail/2777647-MAX17048GT10/C2682616,C2682616
+U4,1,USBLC6-2SC6,,,,Package_TO_SOT_SMD:SOT-23-6,https://www.st.com/resource/en/datasheet/usblc6-2.pdf,https://jlcpcb.com/partdetail/STMicroelectronics-USBLC62SC6/C7519,C7519
+"R_2.2k_3,R_2.2k_4",2,R_Small_US,,,,Resistor_SMD:R_0402_1005Metric,,https://jlcpcb.com/partdetail/26622-0402WGF2201TCE/C25879,C25879
+"R_5.1k_1,R_5.1k_2",2,R_Small_US,,,,Resistor_SMD:R_0402_1005Metric,,https://jlcpcb.com/partdetail/26648-0402WGF5101TCE/C25905,C25905
+"R_10k_5,R_10k_6",2,R_Small_US,,,,Resistor_SMD:R_0402_1005Metric,,https://jlcpcb.com/partdetail/C25744,C25744
