@@ -19,6 +19,15 @@ Initially, uPen was named Insta-Form, and it would have served as an alternative
 
 Use Arduino IDE to upload the C++ code to the uPen board (NanoS3 ESP32-S3).
 
+## Battery Wiring Instructions
+
+When you wire the battery with the 28 AWG wire:
+1. Solder the NEGATIVE battery wire to the B- pad of the Li-ion BMS Battery Protection.
+2. Solder a wire between the P- pad of the Li-ion BMS Battery Protection and the P- testpoint on the PCB.
+3. Solder the POSITIVE battery wire to the RawBAT+ testpoint on the PCB.
+4. Solder a wire between the B+ testpoint on the PCB to the B+ pad of the Li-ion BMS Battery Protection.
+5. Solder a wire between the P+ pad of the Li-ion BMS Battery Protection and the P+ testpoint on the PCB.
+
 ## Features
 
 * Uses compact yet powerful dual core ESP32 in the NanoS3 board
