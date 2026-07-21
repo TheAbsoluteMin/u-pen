@@ -36,6 +36,8 @@ Use Arduino IDE to upload the C++ code to the uPen board (NanoS3 ESP32-S3).
 
 ## Full BOM
 
+> [Full CSV](https://github.com/TheAbsoluteMin/u-pen/blob/main/fabrication/uPen_Full_Parts_BOM_7-21-2026.csv)
+
 * [uPen PCB by JLCPCB](https://github.com/TheAbsoluteMin/u-pen/tree/main/fabrication)
 * [NanoS3](https://www.mouser.com/en/ProductDetail/Unexpected-Maker/NS3-01?qs=Z%252BL2brAPG1JKEi5QQZzXXw%3D%3D)
 * [E-Flite 1S 3.7V 150mAh 45C LiPo Battery](https://vortexhobbies.com/flite-150mah-37v-45c-lipo-battery-eflb1501s45-p-98338.html)
