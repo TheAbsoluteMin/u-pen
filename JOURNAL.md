@@ -329,3 +329,16 @@ Another difficult task was gathering all the parts needed in the BOM and finding
 Tomorrow, I will find the total value of all the items needed to build uPen, so I can finally submit the design to Hack Club!
 
 ---
+
+## Log 16: July 21, 2026 - Project Design Submission!
+
+After many, many hours working, redesigning, and adjusting the design for uPen, I have finally finished! I cannot wait to actually put this all together physically, and I began to 3D print the CAD case files!
+
+<img width="4000" height="3000" alt="20260720_170017" src="https://github.com/user-attachments/assets/30d612e2-9961-4bef-9f41-5e7875c16c01" />
+<img width="4000" height="3000" alt="20260720_165615" src="https://github.com/user-attachments/assets/71a4902c-232c-488d-94d2-2edee9a26597" />
+<img width="3000" height="1878" alt="20260720_165521" src="https://github.com/user-attachments/assets/0cc5d996-7880-4bb0-b062-078635b1aac4" />
+
+Until next time,
+TheAbsoluteMin
+
+---
