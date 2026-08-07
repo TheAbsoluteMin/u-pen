@@ -74,7 +74,9 @@ When you wire the battery with the 28 AWG wire:
 | Kapton Tape | 1 | $5.00 | [AliExpress](https://www.aliexpress.us/item/3256810334039048.html?spm=a2g0o.cart.0.0.604838day1WEZB&mp=1&pdp_npi=6%40dis%21USD%21USD+4.98%21USD+4.98%21%21USD+4.98%21%21%21%402101e80b17843442063193245e10b5%2112000052680244168%21ct%21US%21-1%21%211%210%21&_gl=1*n3wywi*_gcl_aw*R0NMLjE3ODQyNTQ1MjIuQ2owS0NRandndUxTQmhETEFSSXNBSC15UHJHT2hNZWJickY5MFFWNTJmQlNVUEV5dDNmbzAxQTdJRW9NVGpQUVJPZWNPeVM5Z3lZcTNPVWFBdW5LRUFMd193Y0I.*_gcl_dc*R0NMLjE3ODQyNTQ1MjIuQ2owS0NRandndUxTQmhETEFSSXNBSC15UHJHT2hNZWJickY5MFFWNTJmQlNVUEV5dDNmbzAxQTdJRW9NVGpQUVJPZWNPeVM5Z3lZcTNPVWFBdW5LRUFMd193Y0I.*_gcl_au*Njk1NDIwODE5LjE3ODQyMDkyNjg.*_ga*OTc2NTMyODkzLjE3ODQzMzY1NzA.*_ga_VED1YSGNC7*czE3ODQzNDQxMjckbzIkZzEkdDE3ODQzNDQyNDIkajUwJGwwJGgw&gatewayAdapt=glo2usa) |
 | Foam Tape | 1 | $1.47 | [AliExpress](https://www.aliexpress.us/item/3256808548405172.html?spm=a2g0o.cart.0.0.604838day1WEZB&mp=1&pdp_npi=6%40dis%21USD%21USD+1.45%21USD+1.45%21%21USD+1.45%21%21%21%402101e80b17843442063193245e10b5%2112000046447612420%21ct%21US%21-1%21%211%210%21&_gl=1*cbqqba*_gcl_aw*R0NMLjE3ODQyNTQ1MjIuQ2owS0NRandndUxTQmhETEFSSXNBSC15UHJHT2hNZWJickY5MFFWNTJmQlNVUEV5dDNmbzAxQTdJRW9NVGpQUVJPZWNPeVM5Z3lZcTNPVWFBdW5LRUFMd193Y0I.*_gcl_dc*R0NMLjE3ODQyNTQ1MjIuQ2owS0NRandndUxTQmhETEFSSXNBSC15UHJHT2hNZWJickY5MFFWNTJmQlNVUEV5dDNmbzAxQTdJRW9NVGpQUVJPZWNPeVM5Z3lZcTNPVWFBdW5LRUFMd193Y0I.*_gcl_au*Njk1NDIwODE5LjE3ODQyMDkyNjg.*_ga*OTc2NTMyODkzLjE3ODQzMzY1NzA.*_ga_VED1YSGNC7*czE3ODQzNDQxMjckbzIkZzEkdDE3ODQzNDQyMzUkajU3JGwwJGgw&gatewayAdapt=glo2usa) |
 | uPen 3D Printed Parts | 1 | $1.00 | Filament from local 3D printer |
-* costs are estimated without discounts, such as those from AliExpress
+| Total Cost | | $212.36 |  |
+* costs are estimated without discounts, such as those from AliExpress.
+* Total cost does not account for shipping, which varies with location.
 
 ## Credits
 
