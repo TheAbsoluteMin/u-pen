@@ -1,4 +1,5 @@
 # uPen
+uPen is a WiFi-enabled smart pen that records handwritten math equations and solves them.
 
 <img width="1373" height="212" alt="PCB_1" src="https://github.com/user-attachments/assets/f235b484-1b3d-4ddd-9890-24535662dff5" />
 
@@ -6,7 +7,7 @@
 
 <img width="1142" height="259" alt="Case1" src="https://github.com/user-attachments/assets/258d4b33-25be-438a-9bfa-49d7d149e01e" />
 
-uPen is a WiFi-enabled smart pen that records handwritten math equations and solves them.
+<img width="1114" height="767" alt="image" src="https://github.com/user-attachments/assets/358092fd-4f12-42fe-8447-0da98777354a" />
 
 ## Inspiration
 
