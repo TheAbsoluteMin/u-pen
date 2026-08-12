@@ -5,27 +5,24 @@ description: "A WiFi-enabled smart pen that records handwritten math equations a
 created_at: "2026-06-21"
 ---
 
-# uPen Development Log
-
-## Log 1: June 21, 2026 - Schematics - 2 hours
+# Log 1: June 21, 2026 - Schematics - 2 hours
 Timelapse <a href="https://lapse.hackclub.com/timelapse/9_8VnrNF68hq">link</a>.
 
-### Inspiration:
 The core inspiration behind Insta-Form (now renamed as uPen) was to bridge the gap between traditional handwriting and instant digital problem-solving. While apps like Photomath exist on smartphones, switching back and forth between a screen and scratch paper disrupts the natural flow of learning and checking math work. I wanted to build a seamless quick tool that lets students or engineers keep their pen to paper while getting instant feedback.
 
 Thus, I am excited to share the first log for Insta-Form (uPen), a smart pencil designed to instantly solve math problems using an onboard camera and Wi-Fi. I finished the first version of the hardware schematics, which is controlled by the ESP32-S3-MINI-1 microcontroller. The pencil integrates lithium battery charging via a TP4056, a USB-C interface for power, a dedicated display, and a camera.
 
 <img width="1328" height="848" alt="image" src="https://github.com/user-attachments/assets/a95a4949-009d-441e-9cf4-d9e296283dca" />
 
-### Struggles:
 Designing a schematic with a camera, an OLED screen, and a power management system into a pencil-thin form factor came with major routing and hardware hurdles. Selecting the ESP32-S3 module was crucial for its native camera support and compact footprint, but mapping out all the connections for all the components was surprisingly difficult! I had to figure out how to wire the resistors, diodes, and capacitors in order to protect my project from frying!
 
-### Future work:
 I will review my schematics again and then, I can begin the complex design and routing of the PCB. I know it will be a challenge to fit everything in such a small board!
+
+**Total time spent: 2 hours**
 
 ---
 
-## Log 2: June 30, 2026 - Schematics Revision - 2 hours
+# Log 2: June 30, 2026 - Schematics Revision - 2 hours
 
 After doing some further research into camera modules, I realized that using a camera for such close distances would not work easily. Furthermore, I would need precise lighting and a way to preview camera snapshots later on. All of these complications pushed me to revise how I would build uPen. I came across this Inertial Measurement Unit (IMU) module, and I realized that I could track and replicate the actual handwriting movements instead of using a camera to capture math problems and send them through an API to retrieve an answer. This means I would redo my entire schematic!!!
 
@@ -49,12 +46,14 @@ and this is what I ended with:
 
 <img width="1920" height="1080" alt="uPen Circuit" src="https://github.com/user-attachments/assets/61e249ec-f08d-4588-98d7-cf615d77d310" />
 
-### Future work:
+
 I am hoping to make a tiny PCB for the back of the MCU and central routing next time, and I hope to begin working on designing how everything will fit into a 3D printed case!
+
+**Total time spent: 2 hours**
 
 ---
 
-## Log 3: July 1, 2026 - CAD Attempt - 3.4 hours
+# Log 3: July 1, 2026 - CAD Attempt - 3.4 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/dnVF-_9PWZdE.
 
@@ -73,12 +72,14 @@ When I began to cover the parts in a cylinder case, I realized that everything w
 
 <img width="932" height="493" alt="image" src="https://github.com/user-attachments/assets/21be4078-28a3-42c5-81b3-ce38dbd38ec4" />
 
-### Future work:
+
 I am going to have to replan my materials in order to figure out how to fit everything in a thinner form factor.
+
+**Total time spent: 3.4 hours**
 
 ---
 
-## Log 4: July 2, 2026 - Intense Planning - 2 hours
+# Log 4: July 2, 2026 - Intense Planning - 2 hours
 
 With some research, I found an interesting microcontroller board that featured an ESP32-S3 while maintaining a small form factor of 28 by 11mm!
 
@@ -102,12 +103,14 @@ Since I decided that housing a full pen inside the case would take up so much pr
 
 Moreover, I had to rework how the pen would function! Since the user would be writing on paper without seeing the ink mark the paper, I plan to have the OLED screen display each handwritten stroke as a preview of the math equation written. Instead of using standard power hungry Wifi transmissions, I decided to use the fast ESP-NOW function with another ESP32 microcontroller in order to handle data transmission. The other ESP32 would be able to process the data with more power as it is not limited to a small battery.
 
-### Future work:
+
 With this new pen vision, I hope to design a schematic that would house all the pen's components in a super small PCB!
+
+**Total time spent: 2 hours**
 
 ---
 
-## Log 5: July 3, 2026 - Schematics Again! - 2 hours
+# Log 5: July 3, 2026 - Schematics Again! - 2 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/iF6mR7ldbXd7.
 
@@ -115,12 +118,14 @@ I honestly cannot believe that I am remaking the schematics for this project for
 
 <img width="1407" height="791" alt="image" src="https://github.com/user-attachments/assets/0206196a-50e7-4181-81f5-3e38c06880f2" />
 
-### Future work:
+
 After verifying my schematic with official wiring schematics for each specialized chip, I will work to ensure that my board is ready to route in the PCB editor!
+
+**Total time spent: 2 hours**
 
 ---
 
-##  Log 6: July 4, 2026 - Schematics Clean Up - 1 hour
+#  Log 6: July 4, 2026 - Schematics Clean Up - 1 hour
 
 Timelapse link: https://lapse.hackclub.com/timelapse/JP0mHgVsAJM-.
 
@@ -134,12 +139,14 @@ Thus, I decided to follow the tip and use the correct symbols for power and GND 
 
 <img width="1198" height="821" alt="image" src="https://github.com/user-attachments/assets/22023963-b688-4702-a651-d44a4e45394e" />
 
-### Future work:
+
 I hope to finally begin working on the PCB design next time!
+
+**Total time spent: 1 hour**
 
 ---
 
-##  Log 7: July 5, 2026 - Start of PCB - 1.5 hours
+#  Log 7: July 5, 2026 - Start of PCB - 1.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/LVc4ahCd2COp.
 
@@ -153,12 +160,14 @@ Honestly, it was difficult to figure out how I would organize each part as I did
 
 It took me quite some time to make some compromises with placements, and I am still rethinking them...
 
-### Future work:
+
 Tomorrow, I really hope to actually start working on routing the PCB.
+
+**Total time spent: 1.5 hours**
 
 ---
 
-##  Log 8: July 6, 2026 - Major PCB Work - 7.5 hours
+#  Log 8: July 6, 2026 - Major PCB Work - 7.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/swXfEaVnoNOx.
 
@@ -185,12 +194,14 @@ Even after all that hard work, KiCad came up with many errors and I realized I d
 
 <img width="1534" height="735" alt="image" src="https://github.com/user-attachments/assets/a99843b0-d7fa-46f9-b184-052386b60b6b" />
 
-### Future work:
+
 After much rest, I must figure out how to optimize this PCB routing and solve all those Design Rules Checker errors...
+
+**Total time spent: 7.5 hours**
 
 ---
 
-##  Log 9: July 7, 2026 - PCB Version 2! - 4 hours
+#  Log 9: July 7, 2026 - PCB Version 2! - 4 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/U-yj73YHo-n-.
 
@@ -211,12 +222,14 @@ Anyhow, this is what the entire PCB looks like as of right now:
 
 <img width="1012" height="337" alt="image" src="https://github.com/user-attachments/assets/ec567e60-9a58-400e-bb4e-3a009d9cf518" />
 
-### Future work:
+
 Next time, I look forward to checking over the PCB with Design Rules Checker again and starting the CAD for the pen case design!
+
+**Total time spent: 4 hours**
 
 ---
 
-##  Log 10: July 8, 2026 - CAD Attempt 2 - 1.5 hours
+#  Log 10: July 8, 2026 - CAD Attempt 2 - 1.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/-Hel6EKzSH4P.
 
@@ -235,12 +248,14 @@ While it was great to reference the STEP file of my PCB, I quickly found that th
 <img width="916" height="270" alt="image" src="https://github.com/user-attachments/assets/63fc5769-2baf-48cc-83ce-58e3d4f60fb7" />
 <img width="807" height="546" alt="image" src="https://github.com/user-attachments/assets/3f1f078f-8f83-4ea9-8b34-425d9d4f6d0f" />
 
-### Future work:
+
 I will make some adjustments to the CAD design and work on creating holes and supports for the components on the PCB board.
+
+**Total time spent: 1.5 hours**
 
 ---
 
-##  Log 11: July 9, 2026 - Heavy CAD Work - 3.5 hours
+#  Log 11: July 9, 2026 - Heavy CAD Work - 3.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/df8S33CcSg0K.
 
@@ -254,12 +269,14 @@ I spent a lot of time figuring out how to create supports for the floating PCB i
 <img width="740" height="568" alt="image" src="https://github.com/user-attachments/assets/9dfa8c5f-0719-42af-a071-ae76543a352a" />
 <img width="740" height="568" alt="image" src="https://github.com/user-attachments/assets/88957d15-b29d-4988-bfde-a2f62f842369" />
 
-### Future work:
+
 I am hoping to finish the CAD case design tomorrow!
+
+**Total time spent: 3.5 hours**
 
 ---
 
-##  Log 12: July 10, 2026 - CAD Completion - 2.5 hours
+#  Log 12: July 10, 2026 - CAD Completion - 2.5 hours
 
 Timelapse link: https://lapse.hackclub.com/timelapse/YAtuVmnhOys9.
 
@@ -274,12 +291,14 @@ Finally, with some pretty coloring, I put all the CAD parts together into a fina
 <img width="1534" height="229" alt="image" src="https://github.com/user-attachments/assets/2d410872-9f78-4fae-b0d4-06f4b1cddfc8" />
 <img width="1339" height="238" alt="image" src="https://github.com/user-attachments/assets/d93cb0b1-87dd-4138-84cf-5ffbe815da2a" />
 
-### Future work:
+
 I will begin working on exporting all my project files for a design submission on Hack Club for funding!
+
+**Total time spent: 2.5 hours**
 
 ---
 
-##  Log 13: July 12, 2026 - Coding - 3 hours
+#  Log 13: July 12, 2026 - Coding - 3 hours
 
 In my mind, the code for uPen was not too hard... until I realized how many parts I had to integrate into the code, including the fuel gauge, IMU, OLED display, interupts, dual I2C lines, ESP-Now, and data packet tracking! In order to keep everything organized, I had to utilize pen states: drawing, solving, and charging.
 
@@ -293,12 +312,14 @@ I also had to come up with a code system, so I could determine whether a data pa
 
 <img width="1336" height="796" alt="image" src="https://github.com/user-attachments/assets/8fd0aedd-e8b8-4983-b228-ea7ccd9ee9f9" />
 
-### Future work:
+
 Later, I will begin compiling all my project files for uPen to put them into GitHub.
+
+**Total time spent: 3 hours**
 
 ---
 
-##  Log 14: July 15, 2026 - uPen GitHub Work - 1 hour
+#  Log 14: July 15, 2026 - uPen GitHub Work - 1 hour
 
 After downloading the many files for my project, including the source files for the Autodesk Fusion CAD files and KiCad PCB and Schematic files, I began to work on the GitHub README. Specifically, I created a colorful guide on Canva for demonstrating how to use uPen and explaining how it works!
 
@@ -306,12 +327,14 @@ After downloading the many files for my project, including the source files for 
 <img width="1545" height="2000" alt="2" src="https://github.com/user-attachments/assets/e8ebead6-3fd0-415c-9adb-957a91fedaad" />
 <img width="1545" height="1999" alt="3" src="https://github.com/user-attachments/assets/ab5d12ee-3b65-42ea-b438-7f63b6a3ab8a" />
 
-### Future work:
+
 I hope to finally finish the GitHub work for uPen soon!
+
+**Total time spent: 1 hour**
 
 ---
 
-##  Log 15: July 16, 2026 - uPen GitHub Work Again! - 1 hour
+#  Log 15: July 16, 2026 - uPen GitHub Work Again! - 1 hour
 
 Today, I realized the great amount of work needed to put everything together into a nice GitHub repository! It took me a while to recall all the features of uPen, so I could put it all into the README.md.
 
@@ -325,12 +348,14 @@ Another difficult task was gathering all the parts needed in the BOM and finding
 
 <img width="2351" height="1151" alt="image" src="https://github.com/user-attachments/assets/6d62dea7-f9ab-45a9-b423-62dd2754cdc9" />
 
-### Future work:
+
 Tomorrow, I will find the total value of all the items needed to build uPen, so I can finally submit the design to Hack Club!
+
+**Total time spent: 1 hour**
 
 ---
 
-## Log 16: July 21, 2026 - Project Design Submission!
+# Log 16: July 21, 2026 - Project Design Submission!
 
 After many, many hours working, redesigning, and adjusting the design for uPen, I have finally finished! I cannot wait to actually put this all together physically, and I began to 3D print the CAD case files!
 
