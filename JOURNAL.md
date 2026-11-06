@@ -8,7 +8,7 @@ created_at: "2026-09-12"
 # Log 1: 9.12.2026 - 9.13.2026 - Schematics Remake
 Timelapse <a href="https://lapse.hackclub.com/timelapse/KwB7Z5Aam9te">link</a>.
 
-Today was a big day!
+Welcome to a new chapter of uPen!
 
 After a lot of thought, I decided that my original concept of uPen seemed impractical, and its PCB itself had some routing and layout issues. Moreover, the CAD case of the pen was unnaturally enormous compared to a normal pen. Thus, I took upon the challenge to redesign the uPen's PCB using ICs instead of devboards.
 
@@ -50,7 +50,7 @@ In order for my pen to charge its battery, I included the TP4054 charger IC.
 # Log 3: 9.16.2026 - 9.17.2026 - Power Regulation Blocks
 Timelapse <a href="https://lapse.hackclub.com/timelapse/qfui5H7x2q5h">link</a>.
 
-Today, I designed the power multiplexer circuit so that my pen could seamlessly switch from battery to USB-C power. I was hoping to isolate the USB-C power from the MCU completely, but then I realized that I would need the MCU to turn on when I am coding.
+I designed the power multiplexer circuit so that my pen could seamlessly switch from battery to USB-C power. I was hoping to isolate the USB-C power from the MCU completely, but then I realized that I would need the MCU to turn on when I am coding.
 
 In earlier projects, I used two diodes to create an OR gate, but I quickly learned that it was inefficient. Thus, I decided to test out an ideal diode design using a P-channel MOSFET.
 
@@ -58,7 +58,7 @@ In earlier projects, I used two diodes to create an OR gate, but I quickly learn
 
 A key feature of this design was that it prevented the voltage drop across a normal diode for the battery.
 
-Then, I began to incorporate the battery JST plug and a switch in order to turn the pen on and off. I added a voltage divider, so I could easily monitor battery levels when using the pen.
+Then, I began to incorporate the battery JST plug and a switch in order to turn the pen on and off. I added a voltage divider for ADC sensing, so I could easily monitor battery levels when using the pen.
 
 <img width="1905" height="782" alt="image" src="https://github.com/user-attachments/assets/adac0ad8-c676-4f57-bb19-677cb2fa6f6c" />
 
@@ -99,5 +99,32 @@ Finally, I began to check that my wire nets aligned on the different schematic s
 <img width="1902" height="777" alt="image" src="https://github.com/user-attachments/assets/4ced57be-64e8-48a6-a6f6-4c18a309f63a" />
 
 **Total time spent: 5 hours**
+
+---
+
+# Log 5: 9.22.2026 - 9.23.2026 - Schematics Cleaning + PCB Start
+Timelapse <a href="https://lapse.hackclub.com/timelapse/JFFThNqN29mq">link</a>.
+
+As I was finishing up the schematics, I realized a major problem. Since I connected voltage dividers directly to the VBUS_5V input from the USB-C receptacle, power could accidentally back feed into the MCU pins before the 3V3 lines power up. This is called ghost powering, and it could prevent the MCU from properly powering on. Ideally, the 3V3 lines would power the MCU first so that it can handle the ADC sensing from the voltage dividers. In order to do this, I actually took some inspiration from the example schematic from the OLED datasheet!
+
+Specifically, the OLED required 3V3 logic power before the higher voltage input, which powers the screen. Thus, the OLED datasheet used a high-side load switch in which the gate of the N-channel MOSFET controls whether or not the main power supply goes through the P-channel MOSFET. This would require 3V3 power to turn on before VBAT power can enter the OLED.
+
+<img width="1917" height="793" alt="image" src="https://github.com/user-attachments/assets/dd32552a-b5ed-414a-ac75-c2ec92695be1" />
+
+Similarly, I can use the same circuit to ensure that 3V3 turns on before allowing 5V to enter the system and power the voltage dividers.
+
+<img width="1913" height="790" alt="image" src="https://github.com/user-attachments/assets/50d9c2e1-eb13-4140-ba9f-348607aeaec4" />
+
+Finally, I began to work in the PCB editor. Since I was used to KiCad and it was my first time using EasyEDA Pro, I spent a bit time learning how to use the PCB editor.
+
+<img width="1910" height="792" alt="image" src="https://github.com/user-attachments/assets/0a3c76e7-6fce-4bc5-b82e-057874e92762" />
+
+Trying to keep my pen slim, I set my PCB border to a tiny width of around 10mm. I also did everything I could to pack the components as close to each other as possible.
+
+<img width="1907" height="790" alt="image" src="https://github.com/user-attachments/assets/4df988f1-2a1e-44da-97df-21bfd5dfae6a" />
+<img width="1912" height="795" alt="image" src="https://github.com/user-attachments/assets/d7620ba5-6473-49e1-89a0-9476fc73ee3a" />
+<img width="1912" height="788" alt="image" src="https://github.com/user-attachments/assets/42a06359-85d8-4b83-aa20-0935e67f9745" />
+
+**Total time spent: 4.15 hours**
 
 ---
