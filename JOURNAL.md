@@ -128,3 +128,63 @@ Trying to keep my pen slim, I set my PCB border to a tiny width of around 10mm. 
 **Total time spent: 4.15 hours**
 
 ---
+
+# Log 6: 9.24.2026 - 9.25.2026 - PCB Placement
+Timelapse <a href="https://lapse.hackclub.com/timelapse/i-GNwKqPbwk5">link</a>.
+
+Placing all the parts in a compact layout is much harder than I thought. I had to measure the distances around each part to make sure that each component had enough manufacturing space.
+
+<img width="1917" height="783" alt="image" src="https://github.com/user-attachments/assets/6ceaeff3-c5be-4354-84c3-a714c347e172" />
+
+After a lot of clicking and dragging and rotating parts, I organized the power regulation blocks into a neat cluster to fill in as much space as possible.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/7db540df-3560-4d21-b4c9-9e1527a69b30" />
+
+I had to place the OLED screen on the back side of the PCB because I ran out of room on the front side. Also, JLCPCB could not assemble that part through SMT assembly.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/2cabeb3f-086f-4815-8b2b-abb017e0312f" />
+
+A neat thing about placing the screen on the back was that I could place its capacitors really close to it with vias.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/3900b2b0-f1e9-47d1-97ed-850ed860fb21" />
+
+After placing more parts, I realized that the parts did not easily fit with each other, which made me a bit unhappy. The switch and JST plug connector really complicated the symmetry I had tried to maintain.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/53e86315-023e-4085-93a8-745d63cca6e1" />
+
+After organizing PCB layout some more, I realized that I had more space than I thought! Thus, I decided to spread the ICs and passives out more to fill in the space.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/e397c85f-8c81-45de-8094-7327b65a6bcc" />
+
+Finally, I started the massive MCU chip.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/3802f8ef-3f62-4b39-a983-29d3cb634867" />
+
+It will be especially difficult to fit everything within a tiny PCB width as I already had trouble fitting the crystal oscillator below.
+
+**Total time spent: 7 hours**
+
+---
+
+# Log 7: 9.26.2026 - Completed PCB Placement
+Timelapse <a href="https://lapse.hackclub.com/timelapse/2V1YR9dmkcz1">link</a>.
+
+Since the crystal oscillators would not easily fit on the top and bottom edges, I rotated the MCU, so they could fit on the left and right sides.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/a92fc69e-f789-47bc-863f-c56e5bf4d5cd" />
+
+After quite a lot of work, I got a nice layout, and everything seemed to fit at the bottom, including the DC-DC power loop too.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/16d0a265-c90e-455b-b0b1-60336212aa99" />
+
+On the other hand, the IMU sensor was easier to place as there was a lot of room at the end of the PCB.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/64640748-5589-446a-be96-d8d729798a7e" />
+
+I then placed the buttons, which are going to be used to control the OLED screen menu, near the end of the PCB. I was surprised at how much extra space along the edges I had!
+
+<img width="1911" height="792" alt="image" src="https://github.com/user-attachments/assets/846b1593-cd5f-401b-9f71-325e154d6580" />
+
+**Total time spent: 4.3 hours**
+
+---
