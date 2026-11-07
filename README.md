@@ -12,7 +12,7 @@ uPen v2 (the latest version) is a complete redesign of v1. Not only were the PCB
 With a sensor PCB and a pen ink refill in a slim case, uPen aims to bridge the gap between handwritten notes and digital notes. Especially when taking notes at school (or anywhere) by hand, it can be tedious to back up those notes online or turn them into online study aids (like Quizlet!). By seamlessly capturing, digitizing, and store handwriting strokes that can be synced online via Bluetooth, uPen v2 avoids cameras and keyboards without requiring any more effort when you write.
 
 ## How it works
-1. You write naturally with uPen v2.
+1. You write with uPen v2 as if it's a normal pen.
 2. The LSM6DSV16XTR IMU captures handwriting strokes for each character written.
 3. Each character is separated in the firmware by sensing differences in electrostatic measurements of the QVAR function of the IMU.
 4. A lightweight tiny AI translates each character into text, storing it into the flash memory chip for long term memory.
