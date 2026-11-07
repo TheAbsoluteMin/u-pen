@@ -188,3 +188,48 @@ I then placed the buttons, which are going to be used to control the OLED screen
 **Total time spent: 4.3 hours**
 
 ---
+
+# Log 8: 9.27.2026 - Begin Routing PCB
+Timelapse <a href="https://lapse.hackclub.com/timelapse/yA78kWwk1_Hi">link</a>.
+
+Today, I finally started to route my PCB! It took me a while to become acquainted to the net classes and design rules in EasyEDA Pro. In the past, when I used KiCad, I initially ignored net classes and rules since they were confusing to use. Whenever I tried to create them in the schematic editor, they would not transfer automatically over into the PCB editor. I ended up using a global clearance for simple PCBs and changing the PCB width whenever I wanted to in the settings.
+
+While that method worked for a while, I would always have a million DRC errors! This time, I wanted to learn to use net classes correctly.
+
+<img width="1910" height="786" alt="image" src="https://github.com/user-attachments/assets/feccdaf3-6b9e-4af1-a009-63c792ca3d8a" />
+
+After some research and clicking around, I got the hang of it.
+
+<img width="1917" height="793" alt="image" src="https://github.com/user-attachments/assets/e150df14-71df-453b-adca-656313e7afe5" />
+
+A neat thing about EasyEDA Pro was that I could actually define each layer's height, which was especially helpful since I wanted a thin PCB for my pen.
+
+<img width="1917" height="782" alt="image" src="https://github.com/user-attachments/assets/b6a83a5d-8dde-4601-bf1e-f92f4f4f52a6" />
+
+I started with the USB-C data lines because those ones needed differential pairing. It took me a few tries to tune the lengths.
+
+<img width="1912" height="792" alt="image" src="https://github.com/user-attachments/assets/6e34b7fb-50ca-45c9-ac15-013fbf36645a" />
+
+Since I did not have enough room on the top layer (it's packed with SMD parts) to bring the data lines all the way to the CP2102N and then the MCU, I had to route on the bottom side of the PCB. I tried to create a GND copper pour on the inner layer to protect the data lines.
+
+<img width="1916" height="792" alt="image" src="https://github.com/user-attachments/assets/0506ae00-cf89-414b-8f34-db44e8d8d34f" />
+
+Then, I started routing the power lines.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/29fd7de2-b9c9-4e6d-a300-e83fd6458ba0" />
+
+I am so grateful I spent so much time carefully planning where to place each part since there were a lot of connections for the power lines!
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/982d1e22-21eb-460b-b8ca-9c43bd4df29a" />
+
+I had tried to pack all the resistors together in a neat pile, but I realized that I may have placed them too close to each other. I was running out of room for traces, and I needed a lot of vias!
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/a6821eef-6303-4873-8c14-3e127fce2250" />
+
+It eventually became too difficult to route the resistors like that, so I decided to spread them out apart. I had a lot of space to use anyways.
+
+<img width="1917" height="783" alt="image" src="https://github.com/user-attachments/assets/ff43a6f5-43d9-4cde-b395-af8f7df07bde" />
+
+**Total time spent: 5.9 hours**
+
+---
