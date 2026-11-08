@@ -233,3 +233,55 @@ It eventually became too difficult to route the resistors like that, so I decide
 **Total time spent: 5.9 hours**
 
 ---
+
+# Log 9: 9.28.2026 - 9.29.2026 - Power Routing
+Timelapse <a href="https://lapse.hackclub.com/timelapse/BeiKYa8MbMa2">link</a>.
+
+I did not realize how much of my PCB the power lines too up! I had to branch out a lot of different power lines from the main input capacitors. There was not much room since I stacked all the parts near each other!
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/469a8816-fee4-43cb-9b17-e2f870f749a4" />
+
+Outside of the dense power maze of decoupling capacitors and MOSFETs were the big switch and JST plug connector. Fortunately, since I could not fit much around those big parts, there was a lot of breathing room for traces.
+
+<img width="1917" height="788" alt="image" src="https://github.com/user-attachments/assets/f9fcbb0f-1b05-4fb1-a628-80742479224a" />
+
+While I was routing the power lines, I unrouted the USB-C data lines so I could clearly see each connection. However, I somewhat regretted that since after checking my work, I realized that one of my bottom side traces was in the way of where the USB data lines were supposed to go.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/a29482e7-d25c-4e4e-bac1-6e70288a7dbf" />
+
+I needed to adjust the bottom side traces so that there was enough room for the USB data lines.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/4155ee81-2ab0-4ff4-8488-b433fc0abe7a" />
+
+Then, I rerouted the data lines.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/ee12c25e-b71d-45e9-8204-d86456e2c14e" />
+
+It got a bit difficult as I finished up the final remaining connections for the power lines. According to my clearance rules, I practically ran out of room for vias!
+
+<img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/95ed82cb-d730-4b2c-b3aa-a4a299631dbd" />
+
+After a lot of pushing traces and vias around to fit everything, I began working on the battery charging circuit.
+
+<img width="1917" height="797" alt="image" src="https://github.com/user-attachments/assets/3a0df747-4e6c-4b2f-bb63-44eeb7f9398a" />
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/b3e212b6-4824-4797-a042-cc4d9c39fb88" />
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/2e9e2845-3818-413b-a3b6-22ed403dde6f" />
+
+Then, I quickly routed the passives for the CP2102N.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/c76336df-bf7c-479e-9146-103ada1abdb6" />
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/fcf43535-c319-4e16-840b-2514188d1436" />
+
+There was not much room, so I had to rely on vias to get to the right places.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/0e92545d-7c34-4a37-b9a7-873034599839" />
+
+Finally, I needed connect the 3V3 lines. Since I wanted to use a double inner GND plane (full GND plane on Inner 1 and mostly GND plane on Inner 2) for the signals on the top and bottom layers, I decided to just loop 3V3 around with a large trace. Moreover, I was already managing many different power lines from 3V3 to 4.2V to 5V (don't forget the additional 4.2V and 5V lines delayed by MOSFETs, which ensure correct power-on timing), so I did not use a copper pour.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/ae000bf4-bb7d-4a59-8e0a-1bb570130e36" />
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/f618d9eb-e7da-43a3-b86a-1afed9b0390b" />
+<img width="1917" height="796" alt="image" src="https://github.com/user-attachments/assets/f1ab19c7-c3f9-4cf5-8248-61b1eb25e318" />
+
+**Total time spent: 7.2 hours**
+
+---
