@@ -285,3 +285,61 @@ Finally, I needed connect the 3V3 lines. Since I wanted to use a double inner GN
 **Total time spent: 7.2 hours**
 
 ---
+
+# Log 10: 9.30.2026 - 10.1.2026 - Finishing Half the Board!
+Timelapse <a href="https://lapse.hackclub.com/timelapse/qV2l_s-JlYOf">link</a>.
+
+I realized that the OLED datasheet did not specify a decoupling capacitor for its VBAT (battery) input (pin 5), so I decided to quickly add one.
+
+<img width="1917" height="796" alt="image" src="https://github.com/user-attachments/assets/df8a5e89-13dc-4055-b083-d97f82ddbd20" />
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/91e44ae6-4c02-43ef-85d6-0a608235cafd" />
+
+I took a few tries to route it since I did not have a lot of room with all those vias near the OLED.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/9abb21a4-498e-4f9d-87c2-8b8cf5edf1c8" />
+
+Clearly that last attempt was a bit strange since the top layer curved around just to switch to the bottom layer, so I decided to put the capacitor and via on the other side. It was much smoother now.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/7213709a-d2e2-44dd-b6d9-5b2356c86de9" />
+
+Fortunately, the local routing for the OLED was much simpler. I was able to use short traces for its passives, like the OLED charge pump capacitors at the bottom of the OLED pins.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/a0382a70-a271-469b-bbba-7f2ad7221744" />
+
+Looking for any other missing connections, I realized that I needed to connect the ADC voltage dividers. I wished I had placed them closer to the MCU rather than in conveniently far places just to fill in dead space.
+
+<img width="1917" height="793" alt="image" src="https://github.com/user-attachments/assets/87760b6d-5e1f-4445-9cce-dffd70ba6612" />
+
+Especially this CHRG ADC line (it signals whether or not the battery is charging) barely fit between other traces!
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/b988de95-fe5d-4b4a-8f4c-ad58d2a6bf37" />
+
+The USB_DETECT ADC line (it checks whether or not USB-C power is plugged in) also took some tries in order to fit while keeping appropriate clearances from the USB-C data lines.
+
+<img width="1916" height="788" alt="image" src="https://github.com/user-attachments/assets/f8a52156-917f-4899-be32-e38724856a9d" />
+
+I also realized that I placed the OLED MOSFET control (it turns the OLED VBAT power for the screen on and off) so far away from the MCU (which sends the on and off signals to the MOSFET), so I needed to use quite a long trace.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/de1ca24c-12d8-40ec-882c-da89ea85df43" />
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/52cd2f7c-8e00-4725-80c8-830ad81335a1" />
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/f202ce22-c536-4a66-9e26-73882da4ca1f" />
+
+Moving on to the MCU, I decided to route its crystals. The first one was symmetrical and simple to route, thankfully.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/0df4b362-de93-4580-97b8-f71e6b6212db" />
+
+I then decided to attempt the MCU's power regulation circuits (DCC pin 47 and DEC4 pin 46).
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/1a7f03a1-689d-4067-86b0-9c39ab5857f4" />
+
+I needed to reorganize them so that the traces had enough clearances from the component pads.
+
+<img width="1917" height="797" alt="image" src="https://github.com/user-attachments/assets/983d30e8-f046-4ca8-b49b-d5ff5adfc8d1" />
+
+The connections seem relatively simple, but the overall length was a bit too long. Next time, I will try to optimize that.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/3fbc6ea1-5173-46cf-b890-3b2f06c0a7ef" />
+
+**Total time spent: 5 hours**
+
+---
