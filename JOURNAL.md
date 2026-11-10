@@ -343,3 +343,38 @@ The connections seem relatively simple, but the overall length was a bit too lon
 **Total time spent: 5 hours**
 
 ---
+
+# Log 11: 10.2.2026 - Routing MCU Attempt 2
+Timelapse <a href="https://lapse.hackclub.com/timelapse/O_HBjuYZbKp0">link</a>.
+
+Seeing that I was space constrained at the bottom, I decided to undo all my routing in order to rotate the MCU.
+
+<img width="1917" height="782" alt="image" src="https://github.com/user-attachments/assets/43bbd911-44ef-44c9-8e8d-8d0876f67836" />
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/fefcc29e-5be5-4bcd-ae85-72e70678c71b" />
+
+With the chip rotated, the crystal oscillators would be on the bottom while MCU power regulation parts could be on the sides, where I would have have enough room to route tighter loops.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/1b72e2a0-034d-48e7-a33c-bf08d10bfc43" />
+
+To save even more room, I tried to aggressively pack the decoupling capacitors next to the MCU's edge. I was amazed at how close I could place it.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/01c67a28-660e-4be4-a01e-3aa30c1884d3" />
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/75a89ccb-7419-4666-aa0e-4558755a161e" />
+
+With the MCU's current orientation, I realized that the Bluetooth antenna pins were on the right side of the MCU chip. This was not ideal since I wanted the antenna to be far away from all the noisy lines and main power regulation blocks (which were on the right half of the PCB). Thus, I decided to rotate the entire MCU chip again so that the antenna could be on the left side of the PCB, where it is much quieter.
+
+Here you can see that the antenna is on pin 31 of the MCU.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/b75e22a7-70de-4ed2-8a3b-13ac3c4b42d6" />
+
+My current orientation had pin 31 on the top, but to the left of the pin was a decoupling capacitor, which blocked the way for an antenna trace to the left.
+
+<img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/411d0faf-b2b2-46bc-8e91-cafb085f83c7" />
+
+Now that I rotated it, the antenna trace can easily go to the left and along the edge.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/313fbe22-722e-475e-aff8-633f77e1da88" />
+
+**Total time spent: 1.2 hours**
+
+---
