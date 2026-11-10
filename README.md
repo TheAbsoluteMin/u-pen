@@ -86,4 +86,20 @@ Now, uPen v2's case is a sleek 12.5mm wide, and it was designed with Onshape.
 1. The NRF52840 MCU must be initially flashed with Nordic's software and bootloader via an SWD programmer before uploading the pen's main code.
 
 ## BOM
-//
+
+| Part Name | Quantity | Total Price | Where to Buy |
+| :--- | :---: | :---: | :--- |
+| uPen PCB | 5 | $69.56 | [JLCPCB](https://jlcpcb.com/) |
+| uPen PCBA | 2 | $181.85 | [JLCPCB](https://jlcpcb.com/) |
+| OLED Screen | 2 | $3.64 | [LCSC](https://www.lcsc.com/product-detail/C18723015.html?s_z=n_q_C18723015&globalKeyword=C18723015) |
+| 30 AWG 0.5MM PCB Flying Jumper Wire | 1 | $7.00 | [AliExpress](https://www.aliexpress.us/item/2255800481153606.html?spm=a2g0o.productlist.main.1.5b8c52c6dqhfpX&algo_pvid=c0db41cf-f68a-49f3-b0cd-bbb869e4a1ec&algo_exp_id=c0db41cf-f68a-49f3-b0cd-bbb869e4a1ec-0&pdp_ext_f=%7B%22order%22%3A%22887%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%217.00%211.09%21%21%217.00%211.09%21%40210327b017942627382282212e0e79%2110000005571941385%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Aa3d7507d%3Bm03_new_user%3A-29895%3BpisId%3A5000000218165391&curPageLogUid=KjZBONr446qX&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A4000667468358%7C_p_origin_prod%3A) |
+| 301020 LiPo Batteries | 1 | $10.11 | [AliExpress](https://www.aliexpress.us/item/2251832810583728.html?spm=a2g0o.productlist.main.9.461bE4UAE4UArO&algo_pvid=3fd1e6d2-fe38-4eb0-b39f-49b563c3360b&algo_exp_id=3fd1e6d2-fe38-4eb0-b39f-49b563c3360b-8&pdp_ext_f=%7B%22order%22%3A%2235%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%2111.90%2110.00%21%21%2111.90%2110.00%21%402101d9ef17894343212786799e0d3e%2112000024080089254%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A748d72d8%3Bm03_new_user%3A-29895&curPageLogUid=2JfzQbrL5XBB&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A32996898480%7C_p_origin_prod%3A) |
+| JST SH 1.0mm 2 Pin Cable | 1 | $3.69 | [AliExpress](https://www.aliexpress.us/item/3256809955750969.html?spm=a2g0o.productlist.main.3.62173c93cfTMBm&algo_pvid=2fcf1894-dfaa-4ec2-b01e-256d85639e75&algo_exp_id=2fcf1894-dfaa-4ec2-b01e-256d85639e75-2&pdp_ext_f=%7B%22order%22%3A%221818%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%213.69%211.09%21%21%2124.51%217.27%21%402101e80b17942634635358014e108a%2112000051297274513%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A50adb272%3Bm03_new_user%3A-29895%3BpisId%3A5000000218165389&curPageLogUid=ZEVk2uUcjnsi&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010142065721%7C_p_origin_prod%3A) |
+| OB-ARM Emulator (SWD) Debugger Programmer | 1 | $2.39 | [AliExpress](https://www.aliexpress.us/item/3256804889623613.html?spm=a2g0o.productlist.main.5.42947b73SrJzEG&algo_pvid=e1381424-0565-4f4a-8087-da6705d4fb17&algo_exp_id=e1381424-0565-4f4a-8087-da6705d4fb17-4&pdp_ext_f=%7B%22order%22%3A%22133%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.39%212.22%21%21%212.39%212.22%21%402101ca9517942735271525494e0e07%2112000034785341692%21sea%21US%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A50adb272%3Bm03_new_user%3A-29895%3BpisId%3A5000000220758679&curPageLogUid=V1MZeZdXsAxP&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005075938365%7C_p_origin_prod%3A) |
+| uPen 3D Printed Parts | 1 | $1.00 | [Filament from local 3D printer](https://github.com/TheAbsoluteMin/u-pen/tree/main/v2_LATEST/v2_3D_Models/3D_Printing) |
+| Total |  | $279.24 | Without Shipping |
+
+## Credits
+Thank you so much for generously funding and supporting the creation of uPen v2:
+- Hack Club
+- EasyEDA
