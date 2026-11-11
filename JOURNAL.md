@@ -378,3 +378,87 @@ Now that I rotated it, the antenna trace can easily go to the left and along the
 **Total time spent: 1.2 hours**
 
 ---
+
+# Log 12: 10.5.2026 - 10.7.2026 - MCU Optimization
+Timelapse <a href="https://lapse.hackclub.com/timelapse/rNpn5BO1Xkc2">link</a>.
+
+Now that the antenna was on the bottom and could loop left (there were no obstructing passive parts in the way), I could place the antenna passives themselves.
+
+<img width="1918" height="790" alt="image" src="https://github.com/user-attachments/assets/f94d26b5-fef6-40e2-b517-eb89d31072e9" />
+
+Fortunately, the big crystal oscillator fit on the right side along the bottom of the MCU.
+
+<img width="1919" height="788" alt="image" src="https://github.com/user-attachments/assets/f6a6cb87-71de-4cb0-9455-61d44348120b" />
+
+I realized that I needed to connect a capacitor to each of the oscillator lines, so I had to make some room for them. For the first connection, I could easily route a trace to the oscillator pin 3 and then another short one to the capacitor outside the oscillator chip. However, I did not have enough space to do the same for the oscillator pin 1, so I used an inwards loop, which I have to admit was a bit unnatural.
+
+<img width="1919" height="786" alt="image" src="https://github.com/user-attachments/assets/94c06139-76e8-4301-b223-ad24860cf371" />
+
+Tuning the trace lengths was a bit hard since EasyEDA calculates the total lengths of the traces, even when parts of them are inside the pads. Thus, I had to try my best to estimate how much distance there actually was between each pad.
+
+<img width="1919" height="795" alt="image" src="https://github.com/user-attachments/assets/e59a2e50-a283-4984-8233-5fd06c0f96ca" />
+
+Unfortunately, I had overlooked the decoupling 3V3 capacitor that was above the oscillator, and I realized that I had barely any room to complete the trace according to my clearance rules.
+
+<img width="1917" height="789" alt="image" src="https://github.com/user-attachments/assets/311355b6-b32d-4d03-a041-ec06c3a350c4" />
+<img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/3b43ed3b-f7df-4d1f-a501-a1a980055cc8" />
+
+To solve that, I simply made the trace width smaller for a bit.
+
+<img width="1917" height="796" alt="image" src="https://github.com/user-attachments/assets/eb2b019d-095d-4822-8ace-96c1ddc711cb" />
+
+Fortunately, since I now had a lot of room to route the MCU's power regulation blocks, I could tighten the inductor loops.
+
+<img width="1919" height="795" alt="image" src="https://github.com/user-attachments/assets/7dc29f63-bc8e-4d25-92c5-49c51c952cfd" />
+<img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/1dfab72a-93ce-460b-b72c-b50f0e842c8b" />
+
+After moving the inductors and capacitors around, I ended up with a neat, short loop.
+
+<img width="1919" height="797" alt="image" src="https://github.com/user-attachments/assets/c8a32e8f-4f53-4f6d-85e3-e820b0758171" />
+
+Then, I began to place the GND escape vias, but I realized I that many of them did not fit.
+
+<img width="1918" height="794" alt="image" src="https://github.com/user-attachments/assets/29d844f4-5abd-4e9c-81e9-faf0d9989c73" />
+
+As a result, I spent some more time pushing traces around until there was enough room for the GND vias.
+
+<img width="1918" height="787" alt="image" src="https://github.com/user-attachments/assets/16f5e377-4e3f-45cc-8e52-e0f83d39fc09" />
+<img width="1907" height="786" alt="image" src="https://github.com/user-attachments/assets/c4140530-dfd0-41bf-8336-f3bec79b0cb0" />
+
+In order to keep the routing as clean as possible for the antenna, I orientated the capacitors to stand vertically while keeping the 50 ohms single-ended impedance Bluetooth trace along the bottom edge of the PCB.
+
+<img width="1912" height="797" alt="image" src="https://github.com/user-attachments/assets/835b1e50-f503-4a04-873e-267e5e241298" />
+
+While routing the 50 ohms line, I had to shorten the width for a tiny bit in order to satisfy my clearance rules.
+
+<img width="1918" height="789" alt="image" src="https://github.com/user-attachments/assets/c58c8675-647d-4ed3-b4fb-ee62accb81df" />
+
+It was my first time using curved traces, so it was cool. I had only seen 45 or 90 degree traces!
+
+<img width="1918" height="796" alt="image" src="https://github.com/user-attachments/assets/62b971fb-3e1e-47eb-97dc-5c1abbb390f8" />
+
+Working on the FLASH memory chip was not too difficult since I switched to standard SPI instead of QSPI since I did not need fast read and write times.
+
+<img width="1918" height="787" alt="image" src="https://github.com/user-attachments/assets/a1e3f4ce-5bd6-4529-ad8e-6954ef065d90" />
+<img width="1917" height="793" alt="image" src="https://github.com/user-attachments/assets/baa6cda8-6fb3-4c8b-819c-4612be678b79" />
+
+Another reason I switched was to free up some more pins on the MCU.
+
+<img width="1919" height="786" alt="image" src="https://github.com/user-attachments/assets/447361ed-77f3-4a68-ba17-667eadd80f1e" />
+
+Since I did not have much room to route on the top layer, I had to use the bottom layer to cut underneath the MCU's big GND pad. Fortunately, I still had a solid GND plane on Inner 1 layer, and I will indeed add vias.
+
+<img width="1914" height="796" alt="image" src="https://github.com/user-attachments/assets/6ff0cd7b-5c47-4a0d-b7a7-e12f67d6ba51" />
+
+I was still amazed at how much space the 4 SPI lines of the FLASH chip took up underneath the MCU given the clearance rules.
+
+<img width="1919" height="790" alt="image" src="https://github.com/user-attachments/assets/91f26161-a0d5-44b1-acf2-266a7f58fae8" />
+
+I decided to place the analog ADC voltage dividers closer to the MCU so that I could reduce noise. Space was sparse, so the closest I could place them were behind the FLASH memory chip.
+
+<img width="1914" height="790" alt="image" src="https://github.com/user-attachments/assets/25ef7fa0-0697-4877-a101-b3161adce869" />
+<img width="1919" height="790" alt="image" src="https://github.com/user-attachments/assets/d256b6d1-6949-422f-af2c-0745e67eaa71" />
+
+**Total time spent: 6.4 hours**
+
+---
