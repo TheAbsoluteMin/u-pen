@@ -462,3 +462,109 @@ I decided to place the analog ADC voltage dividers closer to the MCU so that I c
 **Total time spent: 6.4 hours**
 
 ---
+
+# Log 13: 10.8.2026 - 10.9.2026 - Finalizing PCB
+Timelapse <a href="https://lapse.hackclub.com/timelapse/OxuxDo3WjiVd">link</a>.
+
+I forgot to place 3V3 (VDD_NRF) vias for all the decoupling capacitors of the MCU! This was not an easy fix since I had already packed all the passives and traces too close to each other, leaving almost no room for vias.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/51becf21-b53a-44e2-93c2-e8c795d33501" />
+
+After moving the bottom layer traces up and out of the way, I made enough room for a via!
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/5854b968-22e8-433a-b9aa-153b64bf140b" />
+
+Apparantly, I still did not connect the RXD and TXD traces to the MCU yet, and they were still on the other end of the board, far away from the MCU! I tried my best to stay on the top or bottom layer. 
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/8bd32cf8-3333-49b7-b837-5ba216dcccac" />
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/b741a9b8-d42a-4c47-a4dc-4e877fa2537e" />
+
+Since I practically ran out of room, I had to switch to the Inner 2 layer to get across the MCU to the correct pins.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/f9d4fec5-9df9-41fe-98fc-285007caac22" />
+<img width="1916" height="780" alt="image" src="https://github.com/user-attachments/assets/d6e0afbc-bf70-452f-aaef-3ebfc305a5a0" />
+
+It was especially crowded on the left side of the MCU since the antenna keep out zone was near it. I ran into another space issue because I also needed room for a 3V3 (VDD_NRF) via as well. The problem was that it was near the RXD connection!
+
+<img width="1913" height="792" alt="image" src="https://github.com/user-attachments/assets/56df6108-bd77-486c-88a2-c805ac16c5de" />
+
+Thus, I had to move around the pin connections to places where I had more space.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/12459109-f685-4925-9d25-25492f642160" />
+
+I ended up moving RXD to the top of the MCU chip, where it was less crowded.
+
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/0e01b9f6-530c-4c10-bcd4-9eb7edf7e4b9" />
+
+You would never guess what I found on the right side of the MCU chip. Another decoupling capacitor that did not have a 3V3 via yet! No! I had to go back to the schematics to move the data connections up so I had enough room to place the 3V3 via.
+
+<img width="1917" height="783" alt="image" src="https://github.com/user-attachments/assets/9e0a2958-ea7b-4112-a473-6f7d485772b2" />
+
+I sadly got rid of a button in order to do so, but I needed to prioritize the decoupling capacitor connection.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/6fe281d1-03cc-4c79-9c9b-51bfd67cf7bd" />
+
+Now that all the decoupling capacitors had vias for 3V3, I made sure that they all connected to the main 3V3 branch on the Inner 2 plane.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/27272a08-ac5d-48bc-9595-2f6b0571f125" />
+<img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/e1168982-24fa-456f-879d-0d4c81c96d5e" />
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/551204d7-4d8f-4b00-9552-fc055664bbca" />
+<img width="1917" height="797" alt="image" src="https://github.com/user-attachments/assets/3db79a9b-b7bb-4ae8-ad56-702496e5cc2e" />
+
+Since the SWD flashing pins (SWDCLK and SWDIO) were conveniently near the antenna pin, I practically had no space to route them far out.
+
+<img width="588" height="456" alt="image" src="https://github.com/user-attachments/assets/a0c8210e-f9a0-4f92-9333-ec8f3961aeb6" />
+
+Thus, I utilized exposed vias.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/5657474e-1b08-4f18-851f-1854fdbd0811" />
+
+I had test points on those SWD pins from the schematic (which the vias now replaced), so I hid them by shrinking their size and putting them inside the pad.
+
+<img width="1917" height="798" alt="image" src="https://github.com/user-attachments/assets/165aebe5-56e3-4419-8c77-37ddeec78d56" />
+
+Finally, I finished routing the entire MCU!!! I quickly moved on to the IMU, which was sitting at the tip of the board. With so much extra space, here it was easy to route the connections. Still, I had to be careful to route around the QVAR blocks since they contain exposed copper pads for capacitive sensing (to detect if the smart pen touches paper or not).
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/144f2031-b103-4e89-b964-7e92c3dadae2" />
+
+In order to protect the SDA and SCL lines from interference from the exposed copper pads, I isolated the QVAR blocks with GND traces.
+
+<img width="1916" height="790" alt="image" src="https://github.com/user-attachments/assets/d5c5b9be-fe92-45f9-bc4d-9d8e43b5c0f9" />
+
+Spacing was tight as I also had to separate the QVAR sensing lines from each other as well with another GND trace.
+
+<img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/ad117821-36a5-48f1-9b91-ced3ddf7dc0c" />
+
+After I resolved that, I realized that I needed to route the IMU interrupt line to the MCU! Not again! I was not sure how I could get that trace across to the MCU pin. It was also dangerously close to the Bluetooth antenna!
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/a3db1ead-f7c1-4894-9853-dac13ff26044" />
+
+I eventually got it, but I immediately found another problem that needed attention. I did not route the SDA and SCL lines for the OLED yet! To make things more difficult, there was no room for traces!
+
+<img width="1912" height="786" alt="image" src="https://github.com/user-attachments/assets/0c872a4b-4660-4a58-abf1-dd8d1e67909d" />
+
+Even if I managed to break out vias, there was no more room across the MCU (the OLED is placed to the right of the MCU) since I already used all three layers (except the GND plane) for data lines! Thus, I decided that I would break out vias as big as possible and expose them to be soldered with physical wires.
+
+<img width="1912" height="780" alt="image" src="https://github.com/user-attachments/assets/d07a0497-4807-45ff-be37-cbdac079a5e1" />
+
+I fortunately had just enough room for the exposed vias.
+
+<img width="1917" height="795" alt="image" src="https://github.com/user-attachments/assets/fb649c16-2b47-41fe-be8c-cb7f78661426" />
+
+I filled the GND copper plane, and I was surprised that it reached all the GND vias despite all the data vias I used!
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/0593d403-c44e-414c-8831-94396d1c4971" />
+
+I order to prevent bottlenecks, I filled in as much of the Inner Layer 2 with a GND copper pour as well. Of course, the Design Rules Checker was not happy with me.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/9ad087d6-ff0b-41a5-9af4-2d32d8767085" />
+
+With some fixes, I cleared all the errors (besides the missing SDA and SCL connections for the OLED, but that is intentional and will be resolved by soldering the physical wires)!
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/116d12f7-90fb-460c-a84b-a0e2acb4daa3" />
+
+The PCB is practically finished!!!
+
+**Total time spent: 5.2 hours**
+
+---
