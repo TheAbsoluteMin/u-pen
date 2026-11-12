@@ -11,13 +11,6 @@ uPen v2 (the latest version) is a complete redesign of v1. Not only were the PCB
 
 With a sensor PCB and a pen ink refill in a slim case, uPen aims to bridge the gap between handwritten notes and digital notes. Especially when taking notes at school (or anywhere) by hand, it can be tedious to back up those notes online or turn them into online study aids (like Quizlet!). By seamlessly capturing, digitizing, and store handwriting strokes that can be synced online via Bluetooth, uPen v2 avoids cameras and keyboards without requiring any more effort when you write.
 
-## How it works
-1. You write with uPen v2 as if it's a normal pen.
-2. The LSM6DSV16XTR IMU captures handwriting strokes for each character written.
-3. Each character is separated in the firmware by sensing differences in electrostatic measurements of the QVAR function of the IMU.
-4. A lightweight tiny AI translates each character into text, storing it into the flash memory chip for long term memory.
-5. You can transfer your notes via the Bluetooth function.
-
 ## Features
 1. NRF52840 MCU
 2. 8 megabyte SPI NOR Flash memory IC
@@ -28,13 +21,12 @@ With a sensor PCB and a pen ink refill in a slim case, uPen aims to bridge the g
 7. LSM6DSV16XTR IMU
 8. Power timing and regulation between 5V USB-C and 3.7V LiPo battery
 9. Built-in charging
-10. Tiny AI character recognition
+10. Character recognition
 
 ## Schematics
 <img width="1153" height="811" alt="image" src="https://github.com/user-attachments/assets/2d6580a7-921b-4876-872e-f577db466077" />
 <img width="1920" height="1360" alt="image" src="https://github.com/user-attachments/assets/7ffcd238-2036-4851-9728-4a56f6edc1c0" />
 <img width="1920" height="1360" alt="image" src="https://github.com/user-attachments/assets/5e0cf67f-eedf-4524-8d39-824bdc42be01" />
-
 
 ## PCB
 uPen v2 was designed with EasyEDA Pro.
@@ -53,6 +45,7 @@ Bottom Layer
 <img width="2160" height="230" alt="image" src="https://github.com/user-attachments/assets/76ef1a02-b493-46b6-aa62-67ce828dc3c2" />
 
 ### PCB Assembly
+** _Please note that the SDA/SCL lines for the OLED are intentionally not connected on the PCB by default_ **
 1. Solder 30 AWG wires for the OLED's SDA/SCL lines to the respective vias as marked on the PCB.
 2. Solder on the OLED screen on the back of the PCB.
 3. With a JST SH 1.0mm pitch connector, plug in the battery (recommended is 301020 size with 80 mAh).
@@ -82,8 +75,41 @@ Now, uPen v2's case is a sleek 12.5mm wide, and it was designed with Onshape.
 2. After placing the PCB inside the Bottom Case, snap the Top Case above it.
 3. With the pen ink refill inside, press the Nose part onto the case. 
 
-## Firmware
-1. The NRF52840 MCU must be initially flashed with Nordic's software and bootloader via an SWD programmer before uploading the pen's main code.
+## How To Use
+1. Ensure uPen's battery is full by charging it with a USB-C cable.
+2. Begin writing with uPen v2 as if it's a normal pen.
+3. You can view your notes on the screen or sync them online via Bluetooth.
+
+## Firmware Logic: How It Works
+1. uPen automatically detects when you start writing.
+
+<img width="1297" height="125" alt="image" src="https://github.com/user-attachments/assets/96611df2-33a6-43b1-bb70-74f2ffebe961" />
+
+2. The LSM6DSV16XTR IMU captures handwriting strokes for each character that you write.
+
+<img width="1312" height="152" alt="image" src="https://github.com/user-attachments/assets/18fb0bfd-8861-4efe-bc51-9656f7b4aa9e" />
+
+3. Each character is separated in the firmware by sensing differences in electrostatic measurements of the QVAR function of the IMU.
+
+<img width="1307" height="328" alt="image" src="https://github.com/user-attachments/assets/7a0c7a0b-c364-4585-b1e0-bab20166de1e" />
+<img width="1337" height="240" alt="image" src="https://github.com/user-attachments/assets/2714bce4-4bae-4cca-9c23-d52a6e50be8e" />
+
+4. Characters are translated into text.
+
+<img width="1347" height="147" alt="image" src="https://github.com/user-attachments/assets/ecf4d736-170e-4ad0-b21a-d36079dfdd1b" />
+<img width="1332" height="222" alt="image" src="https://github.com/user-attachments/assets/9465c0b8-7fcf-43cc-904e-1dfa398bc67c" />
+
+5. Notes are stored into the flash memory chip for long term memory.
+
+<img width="1295" height="560" alt="image" src="https://github.com/user-attachments/assets/934b4cac-5086-415f-8f66-180c2c540fdc" />
+
+6. Notes can be transfered via Bluetooth.
+
+<img width="1333" height="450" alt="image" src="https://github.com/user-attachments/assets/02de3e22-d732-4db7-a72b-8fd6ecc25ad4" />
+
+### Firmware Setup
+1. Flash Nordic's software and bootloader via an SWD programmer onto the NRF52840 MCU. Instructions are found [here](https://www.nordicsemi.com/Products/nRF52840/GetStarted).
+2. Upload uPen's main code [here](https://github.com/TheAbsoluteMin/u-pen/blob/main/v2_LATEST/v2_Firmware/src/main.cpp) via USB-C.
 
 ## BOM
 
