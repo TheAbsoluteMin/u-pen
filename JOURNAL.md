@@ -568,3 +568,264 @@ The PCB is practically finished!!!
 **Total time spent: 5.2 hours**
 
 ---
+
+# Log 14: 10.11.2026 - PCB Order
+Timelapse <a href="https://lapse.hackclub.com/timelapse/1KCZ31A6TQS4">link</a>.
+
+Today, I finally began ordering my PCB! All was well until I clicked on the component selector page on the PCBA order page... The main MCU (NRF52840) version (QFN-48) that I had been using this whole time was out of stock!
+
+<img width="1916" height="786" alt="image" src="https://github.com/user-attachments/assets/01c76e4b-761d-425b-bb9a-395c65651ff3" />
+<img width="1891" height="961" alt="image" src="https://github.com/user-attachments/assets/ed8688c8-4089-4b9b-8cd6-6a1684ce79d9" />
+
+Fortunately, after some research, I found a drop-in replacement that I could use instead! That meant I did not have to wait for my part to restock!
+
+<img width="1902" height="966" alt="image" src="https://github.com/user-attachments/assets/87f7463e-26f4-4d2a-b5f0-657ab3421701" />
+
+The main battery switch that I used was also out of stock, and it was a little more difficult to find drop-in replacements. I opened up a new project to compare different footprints to see if I needed to change my own PCB.
+
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/3edadd9f-df5b-42d4-89b5-aea30315afc7" />
+<img width="1917" height="787" alt="image" src="https://github.com/user-attachments/assets/ee3d540f-bb8c-4f2c-a472-ba4984cb7ce8" />
+
+Sadly, the anchor holes and pads were a little off. Thus, I quickly decided to simply replace the entire switch on my PCB since it only required minimal rerouting.
+
+<img width="1917" height="791" alt="image" src="https://github.com/user-attachments/assets/533c8c19-910e-4ee9-a302-c76c40dabfa9" />
+<img width="1917" height="790" alt="image" src="https://github.com/user-attachments/assets/8210bed5-a0b2-4c1c-b3a4-51261c141905" />
+
+Finally, I moved on to checking the component placing on the PCB. It took me some time to verify orientations as I had to switch back and forth between my PCB and the order page.
+
+<img width="1917" height="785" alt="image" src="https://github.com/user-attachments/assets/443ceff8-9d21-4cf3-9ab0-441818e94cc6" />
+<img width="1917" height="788" alt="image" src="https://github.com/user-attachments/assets/cc8f828e-ba26-4762-af8e-fe1214c912ef" />
+
+I was surprised that there was yet another problem with the MCU! It was upside down, so I flipped it over.
+
+<img width="1917" height="792" alt="image" src="https://github.com/user-attachments/assets/6625a710-0035-443d-9788-a5635b2fd97e" />
+<img width="1917" height="733" alt="image" src="https://github.com/user-attachments/assets/95cedcef-7cb6-44ab-aba0-a830580c8f39" />
+
+When I got to the final checkout page, I was shocked at the high price!
+
+<img width="1917" height="796" alt="image" src="https://github.com/user-attachments/assets/e4fdf53d-bde3-428d-81f1-259457964b56" />
+
+I think I will have to lower the PCBA count to 2 to save some money.
+
+**Total time spent: 1.6 hours**
+
+---
+
+# Log 15: 11.6.2026 - Starting CAD Case
+Timelapse <a href="https://lapse.hackclub.com/timelapse/9zl_P-fJbSvP">link</a>.
+
+It's been almost a month since I last worked on this project. I had been busy with schoolwork, but I am finally glad to be back to finally finish uPen v2!!! Since the PCB is completed, I began working on the CAD case. In order to do so, I first downloaded the STEP file of the PCB.
+
+<img width="1802" height="1007" alt="image" src="https://github.com/user-attachments/assets/ba972d27-1210-4072-a630-012004dbf87c" />
+<img width="1805" height="996" alt="image" src="https://github.com/user-attachments/assets/ad14210a-4026-479e-a75b-f2c7577043c2" />
+
+I imported it into Onshape, and it was mostly successful. I'm guessing some parts did not transfer, like the JST plug connector (JLCPCB seemed to not have a 3D model saved for it).
+
+<img width="1798" height="1006" alt="image" src="https://github.com/user-attachments/assets/d1c9087a-a85e-4899-9327-4d7eef25577a" />
+
+Normally, I would create the CAD case directly in the PCB part file since it I could do it in context. Seeing the PCB helped me to see dimensions and clearances. However, with some research, I learned that my current method was unconventional on Onshape. Thus, I decided to try the assembly feature.
+
+<img width="1808" height="987" alt="image" src="https://github.com/user-attachments/assets/845c03a5-7848-483c-b1c3-3a0ed36a1a04" />
+
+Fortunately, there was an "edit in context" option in the assembly tab, so I was still able to design around the PCB!
+
+<img width="1806" height="987" alt="image" src="https://github.com/user-attachments/assets/7cd00493-b8cc-4aa6-ad50-1e5d9c0002f2" />
+
+Honestly, I liked this feature as it allowed me to change the transparency of the PCB, which helps to look inside the case to see if the PCB overlaps or fits well. I first started with a nice simple rectangular prism.
+
+<img width="1807" height="992" alt="image" src="https://github.com/user-attachments/assets/a2c1ddcd-fdbf-4721-b033-924d5e9c9675" />
+
+Then, I added a fillet on all four corners to create a sleek and comfortable writing grip for the pen.
+
+<img width="1800" height="986" alt="image" src="https://github.com/user-attachments/assets/0fd1ff1e-ccd5-4bf9-8fd0-3874c4bbba49" />
+
+I wanted to make the OLED screen sit flush with the casing, but the best I could do was approximate since the OLED screen may end up sitting a little taller than the 3D model. I would be hand soldering the screen and gluing it down with tape (which may add some thickness). To accommodate this, I added a little buffer by elevating the case a bit.
+
+<img width="1802" height="987" alt="image" src="https://github.com/user-attachments/assets/5692657d-87be-464f-8a75-a0265e94ce4e" />
+
+In order to make the inside hollow for the PCB to fit inside, I created a similar rounded box on the inside.
+
+<img width="1802" height="986" alt="image" src="https://github.com/user-attachments/assets/82817bfb-5f75-46d6-96db-4431f3032f14" />
+<img width="1802" height="988" alt="image" src="https://github.com/user-attachments/assets/1f407a1f-946a-455d-85c7-cd2e2e1e2406" />
+
+With a quick extrusion, the inside was hollowed.
+
+<img width="1808" height="990" alt="image" src="https://github.com/user-attachments/assets/49fd88fe-92c2-4fe0-8156-63f22c80bd36" />
+
+In order to make a snug hole for the USB-C receptacle, I used its outline in order to expand it a little, which would be used as a guide to make a hole in the case.
+
+<img width="1806" height="993" alt="image" src="https://github.com/user-attachments/assets/aee9fadb-bb2c-4607-ba02-8229e734f7be" />
+<img width="1805" height="987" alt="image" src="https://github.com/user-attachments/assets/4b802059-0765-4cf6-9014-a8017e855393" />
+<img width="1807" height="986" alt="image" src="https://github.com/user-attachments/assets/0889e92a-3153-48be-9e11-d8c79bb68418" />
+
+With a fillet, I rounded the back end of the pen to give it a smooth look.
+
+<img width="1806" height="995" alt="image" src="https://github.com/user-attachments/assets/f347af9f-fbbb-4412-b52e-cffb3c780368" />
+
+I realized that I actually had too much Z height, so I did not actually need a thin PCB nor a small switch. Instead of changing the PCB, I decided to have the case adapt to it. I began working on an extension piece for the switch handle.
+
+<img width="1806" height="987" alt="image" src="https://github.com/user-attachments/assets/86b36954-1f09-4a99-aa9b-abb79b9dd58e" />
+<img width="1805" height="992" alt="image" src="https://github.com/user-attachments/assets/b25f98ab-40cf-4d70-a3f2-89a8e79d15af" />
+
+I did not really like that the switch handle always left a huge hole whenever you moved it on or off.
+
+<img width="1802" height="997" alt="image" src="https://github.com/user-attachments/assets/fac07d34-39d4-489c-8296-90b39bc3ff64" />
+
+In order to fix this, I created a cover that would slide with the switch handle underneath the case.
+
+<img width="1810" height="1002" alt="image" src="https://github.com/user-attachments/assets/ed05273d-9e31-4a4d-9920-b520137799e1" />
+<img width="1802" height="1000" alt="image" src="https://github.com/user-attachments/assets/f6d64bbb-b278-4a37-a43f-dab37a0ed3fa" />
+
+While it looked clean, I had to create a hole next to the switch handle because there was an LED next to it (the LED shows whether or not the pen is charging).
+
+<img width="1802" height="991" alt="image" src="https://github.com/user-attachments/assets/6fd332c7-e28f-44dd-bce9-8ab309752519" />
+
+The RESET and menu buttons also needed to be extended so that the user can press them easily, so I made a little extension for them.
+
+<img width="1808" height="988" alt="image" src="https://github.com/user-attachments/assets/7d7fb613-b0c1-4e44-a62c-06dd30cdc5a6" />
+<img width="1803" height="995" alt="image" src="https://github.com/user-attachments/assets/1e6d54e5-35d0-4a7b-9d02-a7d67c8579b7" />
+
+In order to help me remember when the switch is on or off, I added a little "OFF" sign on the switch.
+
+<img width="1802" height="983" alt="image" src="https://github.com/user-attachments/assets/9a80f090-03a9-4e1d-af16-f6d5a7898194" />
+<img width="1802" height="987" alt="image" src="https://github.com/user-attachments/assets/4e55f4b6-bbe6-433b-b38d-bde5081288be" />
+
+I also needed to differentiate between the two buttons, so I added a little circle on the menu button.
+
+<img width="1801" height="977" alt="image" src="https://github.com/user-attachments/assets/9e0bfcd6-a7d0-4f01-bb5a-304a2124a6ff" />
+
+I then tried to use the Loft tool to create a cone for the pen's tip, but it wouldn't work!
+
+<img width="1802" height="992" alt="image" src="https://github.com/user-attachments/assets/1eb9c4cd-55ff-4951-9e99-b7164e046fda" />
+
+After looking through some videos, I realized the reason why Loft didn't work! Apparently, it did not work well with hollow objects.
+
+<img width="1742" height="976" alt="image" src="https://github.com/user-attachments/assets/7de71bb9-0fb4-4b28-99ea-c02e04d040af" />
+
+I filled in the surfaces, and it finally created a cone that smoothly transitioned from the rounded square to the circle tip.
+
+<img width="1802" height="987" alt="image" src="https://github.com/user-attachments/assets/83904e05-63e9-43a3-b7cc-87efd2741bdd" />
+
+Since I was not sure how the pen ink refill would fit inside the pen case's tip, I decided to make the cone attachable.
+
+<img width="1805" height="980" alt="image" src="https://github.com/user-attachments/assets/0eb6bc37-a1b3-4f6d-a76c-201bbd2b1504" />
+<img width="1807" height="986" alt="image" src="https://github.com/user-attachments/assets/6e52d087-33e4-4621-a850-d335d7f0bf1e" />
+
+Now, I would not have to reprint the entire case if the pen ink refill did not fit.
+
+**Total time spent: 4.3 hours**
+
+---
+
+# Log 16: 11.7.2026 - Finishing CAD Case + Update GitHub
+Timelapse <a href="https://lapse.hackclub.com/timelapse/MdzBlRJNPXWN">link</a>.
+
+I realized that the buttons and switch were too small to press on a 12.5mm thick pen, so I increased their size.
+
+<img width="1806" height="987" alt="image" src="https://github.com/user-attachments/assets/cbed24fe-0b8e-4906-b149-bf5d9d130ee6" />
+<img width="1806" height="997" alt="image" src="https://github.com/user-attachments/assets/3939aa4b-deba-4194-b856-42b7834705c6" />
+
+Now, the user interface was much more user friendly.
+
+<img width="1796" height="987" alt="image" src="https://github.com/user-attachments/assets/350aa1cb-5647-46d9-8d05-e959288dbbcd" />
+
+Now that the pen case was complete, I needed to split it in half so that it can be easily 3D printed. To do this, I first duplicated the case.
+
+<img width="1797" height="992" alt="image" src="https://github.com/user-attachments/assets/25521bdb-24d3-44a3-b810-de5e9dfb51df" />
+
+Then, I cut each one accordingly with extrusions.
+
+<img width="1802" height="991" alt="image" src="https://github.com/user-attachments/assets/5b7ee31e-ab2f-4b4b-9736-01642be8146c" />
+<img width="1808" height="992" alt="image" src="https://github.com/user-attachments/assets/a62c134b-903b-42b7-bcdd-a5ae465514bd" />
+
+In order for the two case parts to fit together, I included flaps at the front and end of the pen.
+
+<img width="1803" height="996" alt="image" src="https://github.com/user-attachments/assets/558027fc-8579-41d5-be44-928db6a40ea6" />
+<img width="1803" height="997" alt="image" src="https://github.com/user-attachments/assets/7437654b-ad74-4d8f-940d-b980cb84b8c6" />
+
+I added another flap in the middle for extra friction, so the top case would not fall out accidentally.
+
+<img width="1803" height="1000" alt="image" src="https://github.com/user-attachments/assets/cddec3ba-5fc0-4db8-b20f-ad062f9cddb8" />
+
+With some nice coloring, the entire pen case came together.
+
+<img width="1801" height="987" alt="image" src="https://github.com/user-attachments/assets/7f725fc6-34e6-47b2-8cef-14635cb2eabb" />
+<img width="1802" height="987" alt="image" src="https://github.com/user-attachments/assets/29fe830f-56c3-46e7-bb7f-e5aa3f13fff4" />
+
+Now that the case was complete, I began exporting the CAD files for my GitHub repository.
+
+<img width="1803" height="988" alt="image" src="https://github.com/user-attachments/assets/9df09692-815b-4bc9-acfa-da09ad36ab16" />
+
+I worked on editing the README.md with the PCB and CAD files.
+
+<img width="1802" height="988" alt="image" src="https://github.com/user-attachments/assets/e891eede-ec9f-40e1-a930-670aecb64b1d" />
+
+It took some time to compile all my screenshots and organize all the information in one place. Eventually, after a lot of typing, I finished.
+
+<img width="1787" height="980" alt="image" src="https://github.com/user-attachments/assets/42f721b3-0c98-40ad-9ded-fb626ebf140b" />
+
+I then organized my folders in the GitHub repository in VSCode in order to separate the version 1 and version 2 files.
+
+<img width="1805" height="977" alt="image" src="https://github.com/user-attachments/assets/51b8be8d-ee80-477b-a672-8c44d2bbe229" />
+<img width="1802" height="988" alt="image" src="https://github.com/user-attachments/assets/503b3878-9880-4d9f-a7f0-f14756090dc5" />
+
+My GitHub repository is finally all cleaned up!
+
+<img width="1798" height="997" alt="image" src="https://github.com/user-attachments/assets/3f2e7f83-7aa6-4673-8215-84ba42ca5bdd" />
+
+**Total time spent: 4 hours**
+
+---
+
+# Log 17: 11.11.2026 - Coding!
+Coding hours tracked on Hackatime.
+
+Today, I worked on the basic firmware for my pen, so I could test its basic functions when I receive the board. I first needed to install the Hackatime tracker (to track my coding time), but for some reason my extensions marketplace tab was not working! It would not load anything no matter what I did.
+
+<img width="348" height="142" alt="image" src="https://github.com/user-attachments/assets/ea092b49-2ecf-42c5-b2be-82ceeb003668" />
+
+In order to get around this problem, I downloaded the VSIX file from the Open VSX Registry.
+
+<img width="1912" height="1058" alt="image" src="https://github.com/user-attachments/assets/8381ae6e-bb3e-4124-86b8-47f0db5f56d3" />
+
+Now, I could begin writing the firmware... Instead of just writing a single code file, I decided to use the PlatformIO IDE extension so I could later use it to flash firmware on VSCode. Again, the extensions marketplace in VSCode would not load, so I downloaded the VSIX file from GitHub. I also grabbed the C/C++ extension as well, which would help me write my firmware.
+
+<img width="807" height="107" alt="image" src="https://github.com/user-attachments/assets/550982a3-2443-410d-8b84-a91139ed6011" />
+
+Finally, I got the extensions installed!
+
+<img width="425" height="485" alt="image" src="https://github.com/user-attachments/assets/55baa7c1-eaae-4ad8-9cf9-3d2ecef20db3" />
+
+I had been used to Arduino IDE, so it took me some time to get accustomed to how PlatformIO IDE worked. For example, I needed to put the main code file inside a folder called src, and I needed to set up a project file (platformio.ini).
+
+<img width="1150" height="735" alt="image" src="https://github.com/user-attachments/assets/9162b684-a135-443a-afd4-235181441094" />
+
+Now, I could begin coding the logic. I have not used external Flash memory chips before, so I included a little script to make sure that mine works properly.
+
+<img width="823" height="587" alt="image" src="https://github.com/user-attachments/assets/d028b3ab-b35d-4092-8fcf-d2312fc84f9c" />
+
+Then, I drafted the code to save characters into the Flash memory chip.
+
+<img width="972" height="530" alt="image" src="https://github.com/user-attachments/assets/9fdb20a7-df2b-4545-a89b-7f775ca5495a" />
+
+For the core logic, the pen will rely on the QVAR function of the IMU to separate each handwritten stroke and character. Specifically, by using a set threshold, it senses a change in static electricity when the pen touches the paper and lifts up as you write each character.
+
+<img width="1307" height="328" alt="image" src="https://github.com/user-attachments/assets/359dca67-ed3e-4bf7-bc2c-c31c8d9fbcb6" />
+<img width="1337" height="240" alt="image" src="https://github.com/user-attachments/assets/89f52d9c-2029-455e-99a3-a74c6ce4afd1" />
+
+As the user writes each character, the pen tracks your handwriting motions.
+
+<img width="1312" height="152" alt="image" src="https://github.com/user-attachments/assets/e1c87d04-6536-4e3e-9d8a-abdacdd42a21" />
+
+In order to reduce reliance on a button to write, I included this short function that will automatically detect when you start writing, which makes using the pen more intuitive.
+
+<img width="923" height="125" alt="image" src="https://github.com/user-attachments/assets/f482305e-07a9-46de-9072-12787124eeec" />
+
+I can't wait to start testing out the code once my PCB arrives!
+
+Until then,
+TheAbsoluteMin
+
+**Total time spent: 2.4 hours**
+
+---
